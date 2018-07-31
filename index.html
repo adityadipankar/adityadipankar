@@ -42,16 +42,55 @@
     @media (max-width: 479px) {
       //h1{font-size: 100px;}
       }
+      #time{
+        color:white;
+        /* border-bottom: 2px solid #00020a; */
+        padding-bottom: 30px;
+        margin-top: 0px;
+      }
   </style>
 </head>
 
 <body>
   <div class='container'>
-    <h1>A bit low because my sax is in for repair. <br/><br/><a href="mailto:adityadipankar@gmail.com?Subject=Hi" target="_top">Email me</a> for collaborations.</h1>
-    <h2 class='heading'>You could still look at</h2>
+    <h2 class='heading'>Counting</h2>
+    <h1 id="time"></h1>
+    <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Aug 4, 2018 14:40:40").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+      // Get todays date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now an the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the element with id="demo"
+      document.getElementById("time").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+    <h2 class='heading'>You could visit</h2>
     <h2><a href="https://www.behance.net/adityadipankar" target="_blank">Work on behance&nbsp;&rarr;</a></h2>
     <h2><a href="https://www.ruralindiaonline.org" target="_blank">People's Archive of Rural India&nbsp;&rarr;</a></h2>
     <h2><a href="https://www.civis.vote" target="_blank">Civis.vote&nbsp;&rarr;</a></h2>
+    <h1 style='padding-top:30px;'><a href="mailto:adityadipankar@gmail.com?Subject=Hi" target="_top">Email me</a> for collaborations.</h1>
+<!-- border-top: 2px solid #00020a;padding-top:30px; -->
   </div>
 </body>
 
