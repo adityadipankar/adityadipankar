@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <title>BillDesk</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles_1200.css">
+    <link rel="stylesheet" type="text/css" href="css/styles_992_768.css">
+    <link rel="stylesheet" type="text/css" href="css/styles_480_767.css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css" type="text/css" media="all" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/styles_320_479.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/component.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+</head>
+<body>
+  <header class="header">
+      <div class="header-container container"></div>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                  <!--span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar icon-bar-mod"></span>
+                  <span class="icon-bar icon-bar-mod"></span>
+                  <span class="icon-bar icon-bar-mod"></span-->
+
+              </button>
+              <a class="navbar-brand" href="index.html">
+                  <object data="images/svg/billdesk_logo_white.svg" type="image/svg+xml" class="bd-logo-white hidden-xs" >
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <object data="images/svg/billdesk_logo.svg" type="image/svg+xml" class="bd-logo hidden-xs" />
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <span class="visible-xs-inline-block">
+                  <object data="images/svg/bd-logo-color.svg" type="image/svg+xml" class="bd-logo-small" />
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <object data="images/svg/bd-logo-white.svg" type="image/svg+xml" class="bd-logo-small-white" >
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <span>
+            </a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="payment-solutions.html" class="dropdown-toggle header-links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class='solutions-dropdown-text'>Payment Solutions <span class="caret caret-mod"></span></a>
+                <ul class="dropdown-menu dropdown-mod payment-solutions-menu">
+                  <li><a href="payments.html" class='payment-gateway-button'>Payment Gateway</a></li>
+                  <li><a href="bills.html" class='solutions-dropdown-text'>Biller Network</a></li>
+                  <li><a href="recharge.html" class='solutions-dropdown-text'>Recharge</a></li>
+                  <li><a href="recurring-payments.html" class='solutions-dropdown-text'>Recurring Payments</a></li>
+                  <li><a href="business-2-business.html" class='solutions-dropdown-text'>B2B Payments</a></li>
+                  <li><a href="simpel.html" class='solutions-dropdown-text'>Simpel</a></li>
+                  <div class='small-grey-separation'></div>
+                  <li class='all-payments-button'><a href="payment-solutions.html">View All Solutions</a></li>
+                </ul>
+              </li>
+              <li><a href="benefits.html">Benefits</a></li>
+              <li><a href="technology.html">Technology</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle selected-menu-item" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret caret-mod"></span><div class=""></div></a>
+                <ul class="dropdown-menu dropdown-mod more-menu">
+                  <li><a href="about.html" class='payment-gateway-button'>About Us</a></li>
+                  <li><a href="careers.html" class='payment-gateway-button'>Careers</a></li>
+                  <li><a href="partners.html" class='payment-gateway-button'>Partners</a></li>
+                  <li><a href="contact.html" class='payment-gateway-button'>Contact Us</a></li>
+                  <li><a href="story.html" class='payment-gateway-button' style="color:#111;">Our Story</a></li>
+                </ul>
+              </li>
+              <li><a href="index.html">Sign up&nbsp;
+                <!-- <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.84 16"><defs><style>.cls-1{}</style></defs><title>sign-in</title><path class="cls-1" d="M5.46,0.25A0.15,0.15,0,0,0,5.21.4V1.85a0.55,0.55,0,0,0,.25.43L9.83,4.81a0.55,0.55,0,0,1,.25.43v5.53a0.55,0.55,0,0,1-.25.43L5.46,13.73a0.55,0.55,0,0,0-.25.43v1.45a0.15,0.15,0,0,0,.25.14l6.13-3.54a0.55,0.55,0,0,0,.25-0.43V4.22a0.55,0.55,0,0,0-.25-0.43Z"/><polygon class="cls-1" points="4.03 4.91 3.54 5.41 5.79 7.66 0 7.66 0 8.36 5.79 8.36 3.54 10.61 4.03 11.1 7.13 8.01 4.03 4.91"/></svg> -->
+              </a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+
+          <div id="dl-menu" class="dl-menuwrapper visible-xs-block">
+              <button class="dl-trigger">Open Menu</button>
+              <ul class="dl-menu">
+                  <span class="close_fact_section close"></span>
+                  <li>
+                      <a href="#">Payment Solutions
+                          <i class="glyphicon glyphicon-chevron-right glyphicon-mod" ></i>
+                      </a>
+                      <ul class="dl-submenu">
+                          <li class="dl-submenu-image">
+                              <img src='images/solutions/payments/logo-payments.png' class='dropdown-logos'/>
+                              <a href="payments.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Payments Gateway</a>
+
+                          </li>
+                          <li class="dl-submenu-image"><img src='images/solutions/bills/logo-bills.png' class='dropdown-logos'/><a href="bills.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Billers Network</a></li>
+                          <li class="dl-submenu-image"><img src='images/solutions/recharge/logo-recharge.png' class='dropdown-logos'/><a href="recharge.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Recharge</a></li>
+                          <li class="dl-submenu-image"><img src='images/solutions/recurring/logo-recurring.png' class='dropdown-logos'/><a href="recurring-payments.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Recurring Payments</a></li>
+                          <li class="dl-submenu-image"><img src='images/solutions/b2b/logo-b2b.png' class='dropdown-logos'/><a href="business-2-business.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>B2B Payments</a></li>
+                          <li class="dl-submenu-image"><img src='images/solutions/simpel/logo-simpel.png' class='dropdown-logos'/><a href="simpel.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Simpel</a></li>
+                          <li class="dl-submenu-image" style='border-top: 1px solid #dedede;'><a href="payment-solutions.html" class='all-payments-button' style='color:#999;font-size:13px;text-transform:uppercase;'>All payment solutions</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="benefits.html">Benefits</a><li>
+                  <li><a href="technology.html">Technology</a></li>
+                  <li >
+                      <a href="#" role="button" aria-haspopup="true" aria-expanded="false">More
+                          <i class="glyphicon glyphicon-chevron-right glyphicon-mod" ></i>
+                      </a>
+                      <ul class="dl-submenu">
+                          <li><a href="about.html">About Us</a></li>
+                          <li><a href="careers.html">Careers</a></li>
+                          <li><a href="partners.html">Partners</a></li>
+                          <li><a href="contact.html">Contact Us</a></li>
+                          <li><a href="story.html">Our Story</a></li>
+                      </ul>
+                  </li>
+                  <li><div class='gradient-separation-grey'></div></li>
+                  <li><a href="index.html" style='color:#999;font-size:13px;text-transform:uppercase;'>Sign up&nbsp;</a></li>
+              </ul>
+          </div>
+        </div><!-- /.container-fluid -->
+      </nav>
+  </header>
+
+<div class="page-body" >
+    <div id="story-page-carousel" class="carousel slide page-carousel" data-ride="carousel">
+        <!-- Indicators -->
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+             <div class="item hexa-container active" id="story-slide">
+                <div>
+                    <div class="container">
+                        <div class="row main-slide">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 partner-slide-content page-slide-content">
+                                <!-- <img src="images/partners/hero.png" alt="" class="img-responsive"> -->
+                                <div class="slide-text">
+                                    <h1 class='align-center'>A 15-year young journey</h1>
+                                    <p>That began with simplifying bill payments for India</p>
+                                    <h3 class='align-center story-text'><a href='#2000'>Read from the start</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="page-body">
+    <div class="story-timeline container" style='margin-top:-80px;'>
+        <div class="container">
+
+          <div id='2016' class='row latest-bg-block'>
+            <div class="story-logo-latest col-sm-12 col-md-12 col-lg-12">
+              <img src='images/story/2016.png' class='story-logo-img'/>
+              <h1>2016</h1>
+               <p>BillDesk grows to working with all banks/networks for Electronic Bill payments with a reach of 70 plus billers pan-India base of over 1,000 merchants for online payment gateway and recurring payments. We also launch our new brand identity.</p>
+            </div>
+              <h3 class='align-center goto-about-text'><a href='about.html'>Learn more about BillDesk</a></h3>
+          </div>
+
+          <div class='timeline-start'></div>
+
+          <div id='2015' class='row bd-story-div fade-in'>
+            <div class='col-sm-12 col-md-6 col-xs-12 story-year-block light-bg-block'>
+              <h1 class="v_align">2015</h1>
+              <img src='images/story/2015.png' class='story-logo-img story-logo-pos'/>
+            </div>
+            <div class='col-sm-12 col-md-6 col-xs-12 story-block dark-bg-block'>
+               <p class="v_align">Funding from General Atlantic and Temasek + Acquisition of Simpel, enabling small businesses to accept payments through their mobile phones.</p>
+            </div>
+          </div>
+
+          <div class='timeline-line'></div>
+
+          <div id='2014' class='row bd-story-div fade-in'>
+            <div class='col-sm-12 col-md-6 col-xs-12 story-year-block dark-bg-block'>
+              <h1 class="v_align">2014</h1>
+              <img src='images/story/2014.png' class='story-logo-img story-logo-pos'/>
+            </div>
+            <div class='col-sm-12 col-md-6 col-xs-12 story-block light-bg-block'>
+               <p class="v_align">Acquisition of Loylty Rewardz.</p>
+            </div>
+          </div>
+
+          <div class='timeline-line'></div>
+
+          <div id='2012' class='row bd-story-div fade-in'>
+            <div class='col-sm-12 col-md-6 col-xs-12 story-year-block light-bg-block'>
+              <h1 class="v_align">2012</h1>
+              <img src='images/story/2012.png' class='story-logo-img story-logo-pos'/>
+            </div>
+            <div class='col-sm-12 col-md-6 col-xs-12 story-block dark-bg-block'>
+               <p class="v_align">Introduced NPCI’s NACH platform for recurring payments.</p>
+            </div>
+          </div>
+
+          <div class='timeline-line'></div>
+
+          <div id='2011' class='row bd-story-div fade-in'>
+            <div class='col-sm-12 col-md-6 col-xs-12 story-year-block dark-bg-block'>
+              <h1 class="v_align">2011</h1>
+              <img src='images/story/2011.png' class='story-logo-img story-logo-pos'/>
+            </div>
+            <div class='col-sm-12 col-md-6 col-xs-12 story-block light-bg-block'>
+               <p class="v_align">Funding by TA Associates.</p>
+            </div>
+          </div>
+
+          <div class='timeline-line'></div>
+
+          <div id='2006' class='row bd-story-div fade-in'>
+            <div class='col-sm-12 col-md-6 col-xs-12 story-year-block light-bg-block'>
+              <h1 class="v_align">2006</h1>
+              <img src='images/story/2006.png' class='story-logo-img story-logo-pos'/>
+            </div>
+            <div class='col-sm-12 col-md-6 col-xs-12 story-block dark-bg-block'>
+               <p class="v_align">Launch of the BillDesk online payment gateway + Round-2 funding by SBI and Clearstone Ventures.</p>
+            </div>
+          </div>
+
+          <div class='timeline-line'></div>
+
+          <div id='2005' class='row bd-story-div fade-in'>
+            <div class='col-sm-12 col-md-6 col-xs-12 story-year-block dark-bg-block'>
+              <h1 class="v_align">2005</h1>
+              <img src='images/story/2005.png' class='story-logo-img story-logo-pos'/>
+            </div>
+            <div class='col-sm-12 col-md-6 col-xs-12 story-block light-bg-block'>
+               <p class="v_align">Expanded the banks' network reach to 25 banks for electronic bill payment solutions.</p>
+            </div>
+          </div>
+
+          <div class='timeline-line'></div>
+
+          <div id='2002' class='row bd-story-div fade-in'>
+            <div class='col-sm-12 col-md-6 col-xs-12 story-year-block light-bg-block'>
+              <h1 class="v_align">2002</h1>
+              <img src='images/story/2002.png' class='story-logo-img story-logo-pos'/>
+            </div>
+            <div class='col-sm-12 col-md-6 col-xs-12 story-block dark-bg-block'>
+               <p class="v_align">Introduced Universal BillPay platform with Kotak Bank.</p>
+            </div>
+          </div>
+
+          <div class='timeline-line'></div>
+
+          <div id='2001' class='row bd-story-div fade-in'>
+            <div class='col-sm-12 col-md-6 col-xs-12 story-year-block dark-bg-block'>
+              <h1 class="v_align">2001</h1>
+              <img src='images/story/2001.png' class='story-logo-img story-logo-pos'/>
+            </div>
+            <div class='col-sm-12 col-md-6 col-xs-12 story-block light-bg-block'>
+               <p class="v_align">Received 1st round of funding from SIDBI and Bank of Baroda. Introduced Bill Presentment &amp; payment solution in India. Started providing recurring payments' service via ECS with Bank of Baroda.</p>
+            </div>
+            <div id='2000'></div>
+          </div>
+
+          <div class="timeline-end"></div>
+
+          <div class='latest-bg-block fade-in'>
+            <img src='images/story/2000.png' class='story-logo-img-bd timeline-shadow'/>
+            <div class="story-logo-latest col-sm-12 col-md-12 col-lg-12">
+              <h1>2000</h1>
+               <p style='margin-bottom: 50px;'>BillDesk starts with the simple idea of enabling anyone in India to pay bills online, easily.</p>
+            </div>
+          </div>
+
+        </div>
+    </div>
+</div>
+<!-- footer-->
+<div class='gradient-separation'></div>
+<footer class='footer-style'>
+    <div class='page-section footer-primary container'>
+        <div class="row" style="position: relative;">
+            <object data="images/svg/bd-logo-white.svg" type="image/svg+xml" class="bd-footer-logo" >
+                <p>BillDesk_Logo</p>
+            </object>
+            <div class="col-lg-2 col-sm-3 col-md-2 col-xs-6 footer-groups footer-width-adjust-overview">
+                <h4>OVERVIEW</h4>
+                <ul class="" style="list-style:none; padding-left:0px;">
+                    <li class="footer-items"><a href="payment-solutions.html">Payment Solutions</a></li>
+                    <li class="footer-items"><a href="benefits.html">Benefits</a></li>
+                    <li class="footer-items"><a href="technology.html">Technology</a></li>
+                    <li class="footer-items"><a href="partners.html">Partners</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-sm-3 col-md-2 col-xs-6 footer-groups footer-width-adjust-range">
+              <h4>RANGE OF SOLUTIONS</h4>
+                <ul class="" style="list-style:none; padding-left:0px;">
+                  <li class="footer-items"><a href="payments.html">Payment Gateway</a></li>
+                  <li class="footer-items"><a href="bills.html">Biller Network</a></li>
+                  <li class="footer-items"><a href="recharge.html">Recharge Solution</a></li>
+                  <li class="footer-items"><a href="recurring-payments.html">Recurring Payments</a></li>
+                  <li class="footer-items"><a href="business-2-business.html">B2B Payments</a></li>
+                  <li class="footer-items"><a href="simpel.html">Simpel Payments</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 footer-groups footer-width-adjust-core" style='margin-left: 0px;'>
+                <h4>CORE</h4>
+                <ul class="" style="list-style:none; padding-left:0px;">
+                  <li class="footer-items"><a href="about.html">About Us</a></li>
+                  <li class="footer-items"><a href="story.html">Our Story</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 footer-groups footer-width-adjust-joinus" style='margin-left: 0px;'>
+              <h4>JOIN US</h4>
+              <ul style="list-style:none; padding-left:0px;">
+                <!-- <li class="footer-items"><a href="careers.html">Life@BillDesk</a></li> -->
+                <li class="footer-items"><a href="careers.html">Careers</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2 col-sm-2 col-md-2 col-xs-6 footer-groups footer-width-adjust-touch">
+                <h4>GET IN TOUCH</h4>
+                <ul style="list-style:none; padding-left:0px;">
+                    <li class="footer-items"><a href="contact.html">Contact Us</a></li>
+                    <li class="footer-items"><a href="">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-sm-2 col-md-2 col-xs-6 footer-groups">
+                <h4 class='text-align-right'>ACCOUNT</h4>
+                <ul style="list-style:none; padding-left:0px;">
+                    <li class="footer-items text-align-right"><a href="">Sign In</a></li>
+                    <li class="footer-items text-align-right"><a href="">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class='page-section container footer-secondary'>
+        <div class='footer-logos container'>
+            <img class="footer-logo" src='images/index/rupay.png'/>
+            <img class="footer-logo" src='images/index/verified.png'/>
+            <img class="footer-logo" src='images/index/securecode.png'/>
+            <img class="footer-logo" src='images/index/safekey.png'/>
+            <img class="footer-logo" src='images/index/diners.png'/>
+            <img class="footer-logo" style='' src='images/index/iso.png'/>
+            <img class="footer-logo" style='' src='images/index/pci.png'/>
+        </div>
+    </div>
+
+      <div class="page-section container footer-tertiary">
+        <div class='footer-bottommost container'>
+          <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4">
+              <ul class="footer-bottommost-links">
+                  <li class="footer-bottommost-items"><a href="">Terms &amp; Conditions</a></li>
+                  <li class="footer-bottommost-items"><a href="">Privacy Policy</a></li>
+                  <li class="footer-bottommost-items"><a href="">Legal</a></li>
+              </ul>
+          </div>
+          <div class='col-sm-12 col-xs-12 col-md-4 col-lg-4'>
+            <div class='copyright'>IndiaIdeas Pvt. Ltd. 2016&nbsp;&bull;&nbsp;All Rights Reserved</div>
+          </div>
+          <div class='col-sm-12 col-xs-12 col-md-4 col-lg-4'>
+              <div class="social-icon-container">
+                  <div><img src='images/social/linkedin.svg' class='social-icon'/></div>
+                  <div class=''><img src='images/social/facebook.svg' class='social-icon'/></div>
+                  <div class=''><img src='images/social/twitter.svg' class='social-icon'/></div>
+              </div>
+          </div>
+      </div>
+
+</footer>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.dlmenu.js"></script>
+<script src="js/handlebars-v4.0.5.js"></script>
+<script id="event-template-right" type="text/x-handlebars-template">
+  <div class="event event-right row">
+        <div class="col-md-2 col-sm-12">
+            <span class="event-date">{{date}}</span>
+        </div>
+        {{#if image}}
+        <div class="col-md-3 col-xs-12 event-details">
+            <img src="{{image}}">
+        </div>
+        <div class="col-md-7 col-xs-12 event-details">
+            {{#if title}}
+            <h4>{{title}}</h4>
+            {{/if}}
+            <div>{{body}}</div>
+        </div>
+        {{else}}
+        <div class="col-md-10 col-xs-12 event-details">
+            {{#if title}}
+            <h4>{{title}}</h4>
+            {{/if}}
+            <div>{{body}}</div>
+        </div>
+        {{/if}}
+    </div>
+</script>
+<script id="event-template-left" type="text/x-handlebars-template">
+    <div class="row event event-left">
+        <div class="col-sm-2 visible-sm visible-xs">
+            <span class="event-date">{{date}}</span>
+        </div>
+        {{#if image}}
+        <div class="col-md-7 col-xs-12 event-details">
+            {{#if title}}
+            <h4>{{title}}</h4>
+            {{/if}}
+            <div>{{body}}</div>
+        </div>
+        <div class="col-md-3 col-xs-12 event-details">
+            <img src="{{image}}">
+        </div>
+        {{else}}
+        <div class="col-md-10 col-xs-12 event-details">
+            {{#if title}}
+            <h4>{{title}}</h4>
+            {{/if}}
+            <div>{{body}}</div>
+        </div>
+        {{/if}}
+        <div class="col-sm-2 hidden-sm hidden-xs">
+            <span class="event-date">{{date}}</span>
+        </div>
+    </div>
+</script>
+<script type="text/javascript">
+var timeline= [
+  {
+    "title": "Meet the new BilDeskQ",
+    "image": 'images/wip.png',
+    "date": "2016",
+    "body": "Working with all Banks/Networks for Electronic Bill payments with reach of 70 plus Billers pan India Base of over 1,000 merchants for online Payment Gateway and recurring payments",
+  },
+  {
+    "title": "BillDesk acquires Simpel",
+    "image": 'images/solutions/payments/logo-payments.png',
+    "date": "2015",
+    "body": "Funding by General Atlantic and Temasek Acquisition of ‘Simpel’",
+  },
+  {
+    "date": "2014",
+    "body": "Acquisition of Loylty Rewardz",
+  },
+  {
+    "date": "2012",
+    "body": "Introduced NPCI’s NACH platform for recurring payments",
+  },
+  {
+    "date": "2011",
+    "body": "Funding by TA Associates",
+  },
+  {
+    "date": "2006",
+    "body": "Launch of Online Payment Gateway solution Round 2 funding by SBI, Clear stone",
+  },
+  {
+    "date": "2005",
+    "body": "Expanded bank network reach to 25 banks for Electronic Billpay solutions",
+  },
+  {
+    "date": "2002",
+    "body": "Introduced Universal BillPay platform with Kotak Bank",
+  },
+  {
+    "date": "2001",
+    "body": "Received 1st round of funding by SIDBI and BOB Introduced Bill Presentment & payment solution in India with Bank of Baroda Started Recurring payments via ECS",
+  },
+  {
+    "date": "2000",
+    "body": "Started with a simple idea to enable anyone to pay bills online easily",
+  }
+];
+
+$(function(){
+    var sourceLeft   = $("#event-template-left").html();
+    var sourceRight   = $("#event-template-right").html();
+    var templateLeft = Handlebars.compile(sourceLeft);
+    var templateRight = Handlebars.compile(sourceRight);
+    timeline.forEach(function(event, count) {
+        if(count%2 === 0) {
+            $('.timeline-right').append(templateRight(event));
+        } else {
+            $('.timeline-left').append(templateLeft(event));
+        }
+    })
+})
+</script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $(".story-text a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top + 20
+      }, 6000, 'easeOutCubic', function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+        $('.story-logo-img-bd').addClass('timeline-shadow')
+      });
+    } // End if
+  });
+});
+$(window).scroll( function(){
+
+})
+</script>
+
+</body>
+</html>

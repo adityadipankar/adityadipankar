@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <title>BillDesk</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles_1200.css">
+    <link rel="stylesheet" type="text/css" href="css/styles_992_768.css">
+    <link rel="stylesheet" type="text/css" href="css/styles_480_767.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/styles_320_479.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/component.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+</head>
+<body>
+  <header class="header" >
+      <div class="header-container container"></div>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                  <!--span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar icon-bar-mod"></span>
+                  <span class="icon-bar icon-bar-mod"></span>
+                  <span class="icon-bar icon-bar-mod"></span-->
+
+              </button>
+              <a class="navbar-brand" href="index.html">
+                  <object data="images/svg/billdesk_logo_white.svg" type="image/svg+xml" class="bd-logo-white hidden-xs" >
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <object data="images/svg/billdesk_logo.svg" type="image/svg+xml" class="bd-logo hidden-xs" />
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <span class="visible-xs-inline-block">
+                  <object data="images/svg/bd-logo-color.svg" type="image/svg+xml" class="bd-logo-small" />
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <object data="images/svg/bd-logo-white.svg" type="image/svg+xml" class="bd-logo-small-white" >
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <span>
+            </a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="payment-solutions.html" class="dropdown-toggle header-links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class='solutions-dropdown-text'>Payment Solutions <span class="caret caret-mod"></span></a>
+                <ul class="dropdown-menu dropdown-mod payment-solutions-menu">
+                  <li><a href="payments.html" class='payment-gateway-button'>Payment Gateway</a></li>
+                  <li><a href="bills.html" class='solutions-dropdown-text'>Biller Network</a></li>
+                  <li><a href="recharge.html" class='solutions-dropdown-text'>Recharge</a></li>
+                  <li><a href="recurring-payments.html" class='solutions-dropdown-text'>Recurring Payments</a></li>
+                  <li><a href="business-2-business.html" class='solutions-dropdown-text'>B2B Payments</a></li>
+                  <li><a href="simpel.html" class='solutions-dropdown-text'>Simpel</a></li>
+                  <div class='small-grey-separation'></div>
+                  <li class='all-payments-button'><a href="payment-solutions.html">View All Solutions</a></li>
+                </ul>
+              </li>
+              <li><a href="benefits.html">Benefits</a></li>
+              <li><a href="technology.html" class="selected-menu-item">Technology<div class=""></div></a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret caret-mod"></span></a>
+                <ul class="dropdown-menu dropdown-mod more-menu">
+                  <li><a href="about.html" class='payment-gateway-button'>About Us</a></li>
+                  <li><a href="careers.html" class='payment-gateway-button'>Careers</a></li>
+                  <li><a href="partners.html" class='payment-gateway-button'>Partners</a></li>
+                  <li><a href="contact.html" class='payment-gateway-button'>Contact Us</a></li>
+                  <li><a href="story.html" class='payment-gateway-button'>Our Story</a></li>
+                </ul>
+              </li>
+              <li><a href="index.html">Sign up&nbsp;
+                <!-- <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.84 16"><defs><style>.cls-1{}</style></defs><title>sign-in</title><path class="cls-1" d="M5.46,0.25A0.15,0.15,0,0,0,5.21.4V1.85a0.55,0.55,0,0,0,.25.43L9.83,4.81a0.55,0.55,0,0,1,.25.43v5.53a0.55,0.55,0,0,1-.25.43L5.46,13.73a0.55,0.55,0,0,0-.25.43v1.45a0.15,0.15,0,0,0,.25.14l6.13-3.54a0.55,0.55,0,0,0,.25-0.43V4.22a0.55,0.55,0,0,0-.25-0.43Z"/><polygon class="cls-1" points="4.03 4.91 3.54 5.41 5.79 7.66 0 7.66 0 8.36 5.79 8.36 3.54 10.61 4.03 11.1 7.13 8.01 4.03 4.91"/></svg> -->
+              </a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+
+          <div id="dl-menu" class="dl-menuwrapper visible-xs-block">
+            <button class="dl-trigger">Open Menu</button>
+            <ul class="dl-menu">
+                <span class="close_fact_section close"></span>
+                <li>
+                    <a href="#">Payment Solutions
+                        <i class="glyphicon glyphicon-chevron-right glyphicon-mod" ></i>
+                    </a>
+                    <ul class="dl-submenu">
+                        <li class="dl-submenu-image">
+                            <img src='images/solutions/payments/logo-payments.png' class='dropdown-logos'/>
+                            <a href="payments.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Payments Gateway</a>
+
+                        </li>
+                        <li class="dl-submenu-image"><img src='images/solutions/bills/logo-bills.png' class='dropdown-logos'/><a href="bills.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Billers Network</a></li>
+                        <li class="dl-submenu-image"><img src='images/solutions/recharge/logo-recharge.png' class='dropdown-logos'/><a href="recharge.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Recharge</a></li>
+                        <li class="dl-submenu-image"><img src='images/solutions/recurring/logo-recurring.png' class='dropdown-logos'/><a href="recurring-payments.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Recurring Payments</a></li>
+                        <li class="dl-submenu-image"><img src='images/solutions/b2b/logo-b2b.png' class='dropdown-logos'/><a href="business-2-business.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>B2B Payments</a></li>
+                        <li class="dl-submenu-image"><img src='images/solutions/simpel/logo-simpel.png' class='dropdown-logos'/><a href="simpel.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Simpel</a></li>
+                        <li class="dl-submenu-image" style='border-top: 1px solid #dedede;'><a href="payment-solutions.html" class='all-payments-button' style='color:#999;font-size:13px;text-transform:uppercase;'>All payment solutions</a></li>
+                    </ul>
+                </li>
+                <li><a href="benefits.html">Benefits</a><li>
+                <li><a href="technology.html">Technology</a></li>
+                <li >
+                    <a href="#" role="button" aria-haspopup="true" aria-expanded="false">More
+                        <i class="glyphicon glyphicon-chevron-right glyphicon-mod" ></i>
+                    </a>
+                    <ul class="dl-submenu">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="story.html">Our Story</a></li>
+                    </ul>
+                </li>
+                <li><div class='gradient-separation-grey'></div></li>
+                <li><a href="index.html" style='color:#999;font-size:13px;text-transform:uppercase;'>Sign up&nbsp;</a></li>
+            </ul>
+        </div>
+        </div><!-- /.container-fluid -->
+      </nav>
+  </header>
+<div class="page-body">
+    <div id="technology-page-carousel" class="carousel slide page-carousel" data-ride="carousel">
+        <!-- Indicators -->
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" id="technology-slide-1">
+                <div>
+                    <div class="container">
+                        <div class="row main-slide">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 page-slide-content">
+                                <img src="images/common/technology_header.png" alt="" id="" class="img-responsive technology-head-slide slide-image" />
+                                <div class="slide-text">
+                                    <h1>Always working. Never seen.</h1>
+                                    <p class="hidden-sm">The most advanced and robust technology platform which is always awake even while your are asleep</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='anchor-nav hidden-sm hidden-xs'>
+      <h3 class="benefits-content-header text-center container">
+        <ul>
+          <li class="button-border-right"><a href='#infra'><img src='images/technology/menu/ip.png' class='technology-menu-image'/>INFRASTRUCTURE</a></li>
+          <li class="button-border-right"><a href='#apis'><img src='images/technology/menu/api.png' class='technology-menu-image'/>APIs</a></li>
+          <li class="button-border-right"><a href='#support'><img src='images/technology/menu/support.png' class='technology-menu-image'/>SUPPORT</a></li>
+          <li><a href='#compliance'><img src='images/technology/menu/compliance.png' class='technology-menu-image'/>COMPLIANCE</a></li>
+        </ul>
+      </h3>
+    </div>
+       <!-- Section 1  -->
+    <div class='page-section technology-content' id="infra">
+    <div class="container">
+
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-xs-12 solutions-section-text">
+          <h3 class="solutions-section-heading">Infrastructure &amp; platform</h3>
+          </div>
+            <div class="col-sm-12 col-md-4">
+                <img src="images/technology/high-security-standards.png">
+                <h4 class="text-xs-center">High security standards</h4>
+                <p class="text-xs-center">BillDesk provides unmatched and advanced security standards ensuring optimal performance and stability for your transactions.
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <img src="images/technology/2-tier-technology-architecture.png">
+                <h4 class="text-xs-center">3-Tier Technology Architecture</h4>
+                <p class="text-xs-center">Our 3-tier architecture is scalable as per your requirements.
+                    It enables switch to multiple carriers with strong connectivity to Visa/Master along with connectivity to pops.</p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <img src="images/technology/dedicated-commercial-grade-infrastructure.png">
+                <h4 class="text-xs-center">Dedicated Commercial Grade Infrastructure</h4>
+                <p class="text-xs-center">A dedicated commercial grade infrastructure is designed to empower you with all the tools
+                  required for multi-channel payments. Our platform is managed by in-house teams and not using the public cloud.</p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <img src="images/technology/tier-3-data.png">
+                <h4 class="text-xs-center">Tier III Data Centre; ISO 9001:2000 &amp; ISO 27001 certified</h4>
+                <p class="text-xs-center">We use a Tier III data centre which is ISO 9001:2000 and ISO 27001 certified.</p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <img src="images/technology/designed-to-handle-large-transaction-volumes.png">
+                <h4 class="text-xs-center">Designed to handle large transaction volumes</h4>
+                <p class="text-xs-center">BillDesk’ robust technology platform is equipped with the most advanced tools and has the capability to handle large transaction volumes.</p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <img src="images/technology/always-available.png">
+                <h4 class="text-xs-center">Always available</h4>
+                <p class="text-xs-center">Our technology is always working and available to ensure best uptime performance with no single point of failure.</p>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+<div class='page-section tech-blockquote'>
+  <div class='tech-photo'>
+    <div class='dark-fill'>
+      <h3 class="blockquote container">
+          BillDesk provides unmatched and advanced security standards ensuring optimal performance and stability for your transactions.
+      </h3>
+    </div>
+  </div>
+</div>
+      <div class="page-section page-section-alternate technology-content" id='apis'>
+        <div class="container">
+
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-xs-12 solutions-section-text">
+            <h3 class="solutions-section-heading">APIs</h3>   <!-- Section 2 -->
+          </div>
+            <div class="col-sm-12 col-md-4">
+                <img src="images/technology/apis-for-all-transactions.png">
+                <h4 class="text-xs-center">APIs for all transactions</h4>
+                <p class="text-xs-center">BillDesk robust platform exposes APIs for all functionalities - testing, payments, settlements,
+                  disputes, analytics, queries, refunds etc. Our APIs supports all technology platforms including Java, PHP, .NET, Ruby, Python.</p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <img src="images/technology/sdk-android-apple.png">
+                <h4 class="text-xs-center">Mobile SDK for iOS, Android</h4>
+                <p class="text-xs-center">We provide a mobile SDK for iOS and Android operating system that helps to implement an In-app payments experience within your mobile application.</p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <img src="images/technology/ivr-based-payments.png">
+                <h4 class="text-xs-center">IVR-based payments</h4>
+                <p class="text-xs-center">Our platform can also expose APIs for automated IVR based payment processing solutions.
+                </p>
+            </div>
+        </div>
+      </div>
+      </div>
+
+    <!-- Section 3 -->
+    <div class='page-section technology-content' id='support'>
+    <div class="container">
+
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-xs-12 solutions-section-text">
+            <h3 class="solutions-section-heading">Support</h3>
+          </div>
+            <div class="col-sm-12 col-md-4">
+                <img src="images/technology/channel-independent-design.png">
+                <h4 class="text-xs-center">Responsive Design</h4>
+                <p class="text-xs-center">Apart from being channel independent, BillDesk design is focused on user interface and user experience. We keep navigation logical and the architecture simple.</p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <img src="images/technology/javascript-libraries.png">
+                <h4 class="text-xs-center">Javascript libraries to collect card credentials</h4>
+                <p class="text-xs-center">Our Javascript libraries allows to collect card credentials on your page and ensures seamless payment experience for your customers without leaving your page.</p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <img src="images/technology/easy-integration.png">
+                <h4 class="text-xs-center">Easy Integration</h4>
+                <p class="text-xs-center">Get integrated with BillDesk to start accepting all kind of payments from ready to use and simple interface across multiple options under single window.</p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <img src="images/technology/advanced-fraud-screening-support.png">
+                <h4 class="text-xs-center">Advanced Fraud screening support</h4>
+                <p class="text-xs-center">Get Advanced Fraud screening support tools from BillDesk which allows you put limits on transactions, volumes etc.</p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <img src="images/technology/express-checkout.png">
+                <h4 class="text-xs-center">Express Checkout</h4>
+                <p class="text-xs-center">Offer quick and convenient way to accept payments from your customers and offer card store feature for express checkouts.</p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <img src="images/technology/round-the-clock-support.png">
+                <h4 class="text-xs-center">Round the clock support</h4>
+                <p class="text-xs-center">BillDesk merchant support helpdesk works 24x7 to resolve all your queries and issues. We have a dedicated team for any incident response and network support.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- Section 4 -->
+    <div class="page-section page-section-alternate technology-content" id='compliance'>
+      <div class='container'>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-xs-12 solutions-section-text">
+            <h3 class="solutions-section-heading">Compliance</h3>
+          </div>
+          <div class="col-sm-12 col-md-4">
+              <img src="images/technology/pci-dss-certified-with-regular-audits.png">
+              <h4 class="text-xs-center">Certifications</h4>
+              <p class="text-xs-center">BillDesk is compliant with PCI DSS, ….others and</p>
+          </div>
+          <div class="col-sm-12 col-md-4">
+              <img src="images/technology/periodic-audits.png">
+              <h4 class="text-xs-center">Periodic Audits by Qualified Security Assessor (QSA)</h4>
+              <p class="text-xs-center">There are periodic audits undertaken by Qualified Security Assessor (QSA) for Card security standards and operation regulations.</p>
+          </div>
+          <div class="col-sm-12 col-md-4">
+              <img src="images/technology/adheres-to-card-scheme-regulations.png">
+              <h4 class="text-xs-center">Adheres to card schemes regulations</h4>
+              <p class="textnology-section-text text-xs-center">BillDesk adheres to all card scheme regulations and standards for Visa, Mastercard.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+</div>
+<!-- footer-->
+<div class='gradient-separation'></div>
+<footer class='footer-style'>
+    <div class='page-section footer-primary container'>
+        <div class="row" style="position: relative;">
+            <object data="images/svg/bd-logo-white.svg" type="image/svg+xml" class="bd-footer-logo" >
+                <p>BillDesk_Logo</p>
+            </object>
+            <div class="col-lg-2 col-sm-3 col-md-2 col-xs-6 footer-groups footer-width-adjust-overview">
+                <h4>OVERVIEW</h4>
+                <ul class="" style="list-style:none; padding-left:0px;">
+                    <li class="footer-items"><a href="payment-solutions.html">Payment Solutions</a></li>
+                    <li class="footer-items"><a href="benefits.html">Benefits</a></li>
+                    <li class="footer-items"><a href="technology.html">Technology</a></li>
+                    <li class="footer-items"><a href="partners.html">Partners</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-sm-3 col-md-2 col-xs-6 footer-groups footer-width-adjust-range">
+              <h4>RANGE OF SOLUTIONS</h4>
+                <ul class="" style="list-style:none; padding-left:0px;">
+                  <li class="footer-items"><a href="payments.html">Payment Gateway</a></li>
+                  <li class="footer-items"><a href="bills.html">Biller Network</a></li>
+                  <li class="footer-items"><a href="recharge.html">Recharge Solution</a></li>
+                  <li class="footer-items"><a href="recurring-payments.html">Recurring Payments</a></li>
+                  <li class="footer-items"><a href="business-2-business.html">B2B Payments</a></li>
+                  <li class="footer-items"><a href="simpel.html">Simpel Payments</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 footer-groups footer-width-adjust-core" style='margin-left: 0px;'>
+                <h4>CORE</h4>
+                <ul class="" style="list-style:none; padding-left:0px;">
+                  <li class="footer-items"><a href="about.html">About Us</a></li>
+                  <li class="footer-items"><a href="story.html">Our Story</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 footer-groups footer-width-adjust-joinus" style='margin-left: 0px;'>
+              <h4>JOIN US</h4>
+              <ul style="list-style:none; padding-left:0px;">
+                <!-- <li class="footer-items"><a href="careers.html">Life@BillDesk</a></li> -->
+                <li class="footer-items"><a href="careers.html">Careers</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2 col-sm-2 col-md-2 col-xs-6 footer-groups footer-width-adjust-touch">
+                <h4>GET IN TOUCH</h4>
+                <ul style="list-style:none; padding-left:0px;">
+                    <li class="footer-items"><a href="contact.html">Contact Us</a></li>
+                    <li class="footer-items"><a href="">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-sm-2 col-md-2 col-xs-6 footer-groups">
+                <h4 class='text-align-right'>ACCOUNT</h4>
+                <ul style="list-style:none; padding-left:0px;">
+                    <li class="footer-items text-align-right"><a href="">Sign In</a></li>
+                    <li class="footer-items text-align-right"><a href="">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class='page-section container footer-secondary'>
+        <div class='footer-logos container'>
+            <img class="footer-logo" src='images/index/rupay.png'/>
+            <img class="footer-logo" src='images/index/verified.png'/>
+            <img class="footer-logo" src='images/index/securecode.png'/>
+            <img class="footer-logo" src='images/index/safekey.png'/>
+            <img class="footer-logo" src='images/index/diners.png'/>
+            <img class="footer-logo" style='' src='images/index/iso.png'/>
+            <img class="footer-logo" style='' src='images/index/pci.png'/>
+        </div>
+    </div>
+
+      <div class="page-section container footer-tertiary">
+        <div class='footer-bottommost container'>
+          <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4">
+              <ul class="footer-bottommost-links">
+                  <li class="footer-bottommost-items"><a href="">Terms &amp; Conditions</a></li>
+                  <li class="footer-bottommost-items"><a href="">Privacy Policy</a></li>
+                  <li class="footer-bottommost-items"><a href="">Legal</a></li>
+              </ul>
+          </div>
+          <div class='col-sm-12 col-xs-12 col-md-4 col-lg-4'>
+            <div class='copyright'>IndiaIdeas Pvt. Ltd. 2016&nbsp;&bull;&nbsp;All Rights Reserved</div>
+          </div>
+          <div class='col-sm-12 col-xs-12 col-md-4 col-lg-4'>
+              <div class="social-icon-container">
+                  <div><img src='images/social/linkedin.svg' class='social-icon'/></div>
+                  <div class=''><img src='images/social/facebook.svg' class='social-icon'/></div>
+                  <div class=''><img src='images/social/twitter.svg' class='social-icon'/></div>
+              </div>
+          </div>
+      </div>
+
+</footer>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.dlmenu.js"></script>
+<script>
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top - 160
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  if ($('#back-to-top').length) {
+      var scrollTrigger = 100, // px
+          backToTop = function () {
+              var scrollTop = $(window).scrollTop();
+              if (scrollTop > scrollTrigger) {
+                  $('#back-to-top').addClass('show');
+              } else {
+                  $('#back-to-top').removeClass('show');
+              }
+          };
+      backToTop();
+      $(window).on('scroll', function () {
+          backToTop();
+      });
+      $('#back-to-top').on('click', function (e) {
+          e.preventDefault();
+          $('html,body').animate({
+              scrollTop: 0
+          }, 500);
+      });
+  }
+  $(window).scroll( function(){
+      if (window.scrollY > 410) {
+          $('.benefits-content-header').parent().addClass('header-sticky-lvl-2');
+      } else if (window.scrollY < 400) {
+          console.log('on top');
+          $('.benefits-content-header').parent().removeClass('header-sticky-lvl-2');
+      }
+  });
+
+  var currentActiveTab = 0;
+  $(window).scroll( function(){
+      $('.solutions-section-heading').each(function(position, element){
+          var sectionPosition = $(this).closest('.page-section').offset().top - $(window).scrollTop();
+          var visibleSection = 0;
+          if (sectionPosition > 150 && sectionPosition < 210) {
+              visibleSection = position + 1;
+              $('.benefits-content-header li').removeClass('active');
+              $('.benefits-content-header li:nth-child('+visibleSection+')').addClass('active');
+          }
+      })
+  });
+});
+</script>
+<a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+</body>
+</html>

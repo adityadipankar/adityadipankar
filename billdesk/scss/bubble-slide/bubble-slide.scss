@@ -1,0 +1,39 @@
+.bubble_continer {
+    height: 500px;
+    width: 100%;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.bubble {
+    border-radius: 100%;
+    background: transparent;
+    position: absolute;
+    transform-origin: 0 0;
+    -webkit-transition: transform 0.2s linear, opacity 0.1s linear;
+    transition: transform 0.2s linear, opacity 0.1s linear;
+    /*transform: matrix(0.8, 0, 0, 0.8, 1900, 298.42);*/
+}
+/*.bubble span {
+    display: none;
+}
+.bubble:hover span {
+    display: block;
+}*/
+.bubble_s1 span {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.bubble_s2 {height: 120px; width: 120px}
+.bubble_s2 span {
+    position: absolute;
+    top: 120px;
+}
+.bubble_s3 {height: 150px; width: 150px}
+.bubble_s3 span {
+    position: absolute;
+    top: 120px;
+}

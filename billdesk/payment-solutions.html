@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <title>BillDesk</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles_1200.css">
+    <link rel="stylesheet" type="text/css" href="css/styles_992_768.css">
+    <link rel="stylesheet" type="text/css" href="css/styles_480_767.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/styles_320_479.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/component.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+</head>
+<body>
+  <header class="header">
+      <div class="header-container container"></div>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                  <!--span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar icon-bar-mod"></span>
+                  <span class="icon-bar icon-bar-mod"></span>
+                  <span class="icon-bar icon-bar-mod"></span-->
+
+              </button>
+              <a class="navbar-brand" href="index.html">
+                  <object data="images/svg/billdesk_logo_white.svg" type="image/svg+xml" class="bd-logo-white hidden-xs" >
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <object data="images/svg/billdesk_logo.svg" type="image/svg+xml" class="bd-logo hidden-xs" />
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <span class="visible-xs-inline-block">
+                  <object data="images/svg/bd-logo-color.svg" type="image/svg+xml" class="bd-logo-small" />
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <object data="images/svg/bd-logo-white.svg" type="image/svg+xml" class="bd-logo-small-white" >
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <span>
+            </a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="payment-solutions.html" class="dropdown-toggle header-links selected-menu-item" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class='solutions-dropdown-text'>Payment Solutions <span class="caret caret-mod"></span><div class=""></div></a>
+                <ul class="dropdown-menu dropdown-mod payment-solutions-menu">
+                  <li><a href="payments.html" class='payment-gateway-button'>Payment Gateway</a></li>
+                  <li><a href="bills.html" class='solutions-dropdown-text'>Biller Network</a></li>
+                  <li><a href="recharge.html" class='solutions-dropdown-text'>Recharge</a></li>
+                  <li><a href="recurring-payments.html" class='solutions-dropdown-text'>Recurring Payments</a></li>
+                  <li><a href="business-2-business.html" class='solutions-dropdown-text'>B2B Payments</a></li>
+                  <li><a href="simpel.html" class='solutions-dropdown-text'>Simpel</a></li>
+                  <div class='small-grey-separation'></div>
+                  <li class='all-payments-button'><a href="payment-solutions.html" style="color:#111;">View All Solutions</a></li>
+                </ul>
+              </li>
+              <li><a href="benefits.html">Benefits</a></li>
+              <li><a href="technology.html">Technology</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret caret-mod"></span></a>
+                <ul class="dropdown-menu dropdown-mod more-menu">
+                  <li><a href="about.html" class='payment-gateway-button'>About Us</a></li>
+                  <li><a href="careers.html" class='payment-gateway-button'>Careers</a></li>
+                  <li><a href="partners.html" class='payment-gateway-button'>Partners</a></li>
+                  <li><a href="contact.html" class='payment-gateway-button'>Contact Us</a></li>
+                  <li><a href="story.html" class='payment-gateway-button'>Our Story</a></li>
+                </ul>
+              </li>
+              <li><a href="index.html">Sign up&nbsp;
+                <!-- <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.84 16"><defs><style>.cls-1{}</style></defs><title>sign-in</title><path class="cls-1" d="M5.46,0.25A0.15,0.15,0,0,0,5.21.4V1.85a0.55,0.55,0,0,0,.25.43L9.83,4.81a0.55,0.55,0,0,1,.25.43v5.53a0.55,0.55,0,0,1-.25.43L5.46,13.73a0.55,0.55,0,0,0-.25.43v1.45a0.15,0.15,0,0,0,.25.14l6.13-3.54a0.55,0.55,0,0,0,.25-0.43V4.22a0.55,0.55,0,0,0-.25-0.43Z"/><polygon class="cls-1" points="4.03 4.91 3.54 5.41 5.79 7.66 0 7.66 0 8.36 5.79 8.36 3.54 10.61 4.03 11.1 7.13 8.01 4.03 4.91"/></svg> -->
+              </a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+
+          <div id="dl-menu" class="dl-menuwrapper visible-xs-block">
+              <button class="dl-trigger">Open Menu</button>
+              <ul class="dl-menu">
+                  <span class="close_fact_section close"></span>
+                  <li>
+                      <a href="#">Payment Solutions
+                          <i class="glyphicon glyphicon-chevron-right glyphicon-mod" ></i>
+                      </a>
+                      <ul class="dl-submenu">
+                          <li class="dl-submenu-image">
+                              <img src='images/solutions/payments/logo-payments.png' class='dropdown-logos'/>
+                              <a href="payments.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Payments Gateway</a>
+
+                          </li>
+                          <li class="dl-submenu-image"><img src='images/solutions/bills/logo-bills.png' class='dropdown-logos'/><a href="bills.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Billers Network</a></li>
+                          <li class="dl-submenu-image"><img src='images/solutions/recharge/logo-recharge.png' class='dropdown-logos'/><a href="recharge.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Recharge</a></li>
+                          <li class="dl-submenu-image"><img src='images/solutions/recurring/logo-recurring.png' class='dropdown-logos'/><a href="recurring-payments.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Recurring Payments</a></li>
+                          <li class="dl-submenu-image"><img src='images/solutions/b2b/logo-b2b.png' class='dropdown-logos'/><a href="business-2-business.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>B2B Payments</a></li>
+                          <li class="dl-submenu-image"><img src='images/solutions/simpel/logo-simpel.png' class='dropdown-logos'/><a href="simpel.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Simpel</a></li>
+                          <li class="dl-submenu-image" style='border-top: 1px solid #dedede;'><a href="payment-solutions.html" class='all-payments-button' style='color:#999;font-size:13px;text-transform:uppercase;'>All payment solutions</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="benefits.html">Benefits</a><li>
+                  <li><a href="technology.html">Technology</a></li>
+                  <li >
+                      <a href="#" role="button" aria-haspopup="true" aria-expanded="false">More
+                          <i class="glyphicon glyphicon-chevron-right" ></i>
+                      </a>
+                      <ul class="dl-submenu">
+                          <li><a href="about.html">About Us</a></li>
+                          <li><a href="careers.html">Careers</a></li>
+                          <li><a href="partners.html">Partners</a></li>
+                          <li><a href="contact.html">Contact Us</a></li>
+                          <li><a href="story.html">Our Story</a></li>
+                      </ul>
+                  </li>
+                  <li><div class='gradient-separation-grey glyphicon-mod'></div></li>
+                  <li><a href="index.html" style='color:#999;font-size:13px;text-transform:uppercase;'>Sign up&nbsp;</a></li>
+              </ul>
+          </div>
+        </div><!-- /.container-fluid -->
+      </nav>
+  </header>
+<div class="page-body all-payment-solutions" >
+    <div id="payment-sol-page-carousel" class="carousel slide page-carousel-paysol" data-ride="carousel">
+        <!-- Indicators -->
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" id="payment-sol-slide-1">
+                <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 payment-sol-slide-content page-slide-content">
+                                <!--img src="images/solutions/head.png" alt="" class="img-responsive hero-slides" /-->
+                                <div class="solution-images">
+                                    <div>
+                                        <div class="payments-button"><a href="#payments-scroll-section"><div id='image2'></div></a></div>
+                                        <div class="bills-button"><a href="#bills-scroll-section"><div id='image3'></div></a></div>
+                                        <div class="recharge-button"><a href="#recharge-scroll-section"><div id='image4'></div></a></div>
+                                        <div class="recurring-button"><a href="#recurring-scroll-section"><div id='image5'></div></a></div>
+                                        <div class="b2b-button"><a href="#b2b-scroll-section"><div id='image6'></div></a></div>
+                                        <div class="simpel-button"><a href="#simpel-scroll-section"><div id='image1'></div></a></div>
+                                        <div class="center-button"><a href='#payment-sol-page-carousel'><div id='bd-logo'></div></a></div>
+                                    </div>
+                                </div>
+                                <div class="slide-text">
+                                    <h1>Explore the wide range of payment solutions</h1>
+									                  <p class="text-xs-center">Addresses every type of payments from accepting payments to making pay-outs. BillDesk offers the most comprehensive suite of payment solutions in India backed by a robust and reliable platform.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='gradient-separation'></div>
+    <div class="payment-sol-content" >
+
+        <div class="" id="payments-scroll-section">
+          <div class='container'>
+            <div class="col-sm-12 col-md-6">
+                    <a href='payments.html'><img class="media-object" src="images/solutions/payments-480.png" alt="..." style="width:100%"></a>
+            </div>
+            <div class="col-sm-12 col-md-6 margin-adjustment">
+                <h3 class="solutions-section-heading-left">Robust Payment Gateway </h3>
+                <h3 class='solutions-subtext'>Secure. Seamless.</h3>
+                <p class="main-solutions-description">All your online payments one destination. Get paid from multiple payment methods including credit cards, debit cards, net banking, wallets and accept payments from any device.</p>
+                <a type="button" class="btn btn-default ps-btn" href="payments.html">
+                    <object data="images/svg/arrow-orange.svg" type="image/svg+xml" style="width:6px;"> </object>
+                    <span style="">LEARN MORE</span>
+                </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-section-alternate" id="bills-scroll-section">
+          <div class='container'>
+            <div class="col-sm-12 col-md-6">
+                <a href='bills.html'><img class="media-object" src="images/solutions/bills-480.png" alt="..." style="width:100%"></a>
+            </div>
+            <div class="col-sm-12 col-md-6 margin-adjustment">
+                <h3 class="solutions-section-heading-left">Comprehensive Biller Network</h3>
+                <h3 class='solutions-subtext'>All Billers. One Platform.</h3>
+                <p class="main-solutions-description">The only interconnected Biller and Bank network, BillDesk aggregates billers pan-India and offers an ability to present bills and accept payments from multiple banking platforms and organisations in India.</p>
+                <a type="button" class="btn btn-default ps-btn" href="bills.html">
+                    <object data="images/svg/arrow-orange.svg" type="image/svg+xml" style="width:6px;"> </object>
+                    <span style="">LEARN MORE</span>
+                </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="" id="recharge-scroll-section">
+          <div class='container'>
+            <div class="col-sm-12 col-md-6">
+                <a href='recharge.html'><img class="media-object" src="images/solutions/recharge-480.png" alt="..." style="width:100%"></a>
+            </div>
+            <div class="col-sm-12 col-md-6 margin-adjustment">
+                <h3 class="solutions-section-heading-left">Effortless Recharge</h3>
+                <h3 class='solutions-subtext'>Anytime. Anywhere.</h3>
+                <p class="main-solutions-description">Provide instant and effortless top ups to your customers for Mobile, DTH, Datacard, Metro, Wallets and Prepaid instruments and increase customer engagement with our value added Recharge solution.</p>
+                <a type="button" class="btn btn-default ps-btn" href="recharge.html">
+                    <object data="images/svg/arrow-orange.svg" type="image/svg+xml" style="width:6px;"> </object>
+                    <span style="">LEARN MORE</span>
+                </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-section-alternate" id="recurring-scroll-section">
+          <div class='container'>
+            <div class="col-sm-12 col-md-6">
+                <a href='recurring.html'><img class="media-object" src="images/solutions/recurring-480.png" alt="..." style="width:100%"></a>
+            </div>
+            <div class="col-sm-12 col-md-6 margin-adjustment">
+                <h3 class="solutions-section-heading-left">Streamline Recurring Payments</h3>
+                <h3 class='solutions-subtext'>Easy collections. Effortless remittance.</h3>
+                <p class="main-solutions-description">Accept secured payments through ACH/ECS services or standing instruction on cards and remit funds effortlessly to anyone with our Recurring payment solution.</p>
+                <a type="button" class="btn btn-default ps-btn" href="recurring.html">
+                    <object data="images/svg/arrow-orange.svg" type="image/svg+xml" style="width:6px;"> </object>
+                    <span style="">LEARN MORE</span>
+                </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="" id="b2b-scroll-section">
+          <div class='container'>
+            <div class="col-sm-12 col-md-6">
+                <a href='business-2-business.html'><img class="media-object" src="images/solutions/b2b-480.png" alt="..." style="width:100%"></a>
+            </div>
+            <div class="col-sm-12 col-md-6 margin-adjustment">
+                <h3 class="solutions-section-heading-left">Dedicated Business 2 Business Payments</h3>
+                <h3 class='solutions-subtext'>Accept payments. Make pay-outs.</h3>
+                <p class="main-solutions-description">Accept big ticket payments from Distributors, franchises and any other business affiliates across multiple payment methods including cards, net banking, ACH/ECS and much more.</p>
+                <a type="button" class="btn btn-default ps-btn" href="b2b.html">
+                    <object data="images/svg/arrow-orange.svg" type="image/svg+xml" style="width:6px;"> </object>
+                    <span style="">LEARN MORE</span>
+                </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-section-alternate" style="margin-bottom:0px;" id="simpel-scroll-section">
+          <div class='container'>
+            <div class="col-sm-12 col-md-6">
+                <a href='simpel.html'><img class="media-object" src="images/solutions/simpel-480.png" alt="..." style="width:100%"></a>
+            </div>
+            <div class="col-sm-12 col-md-6 margin-adjustment">
+                <h3 class="solutions-section-heading-left">Better than collecting cash. <br/>Its Simpel</h3>
+                <h3 class='solutions-subtext'>All remote payments. Easy collections.</h3>
+                <p class="main-solutions-description">You can now collect any payments instantly with ‘Simpel’ mobile payment app, which is a unique cashless payment collection solution and eliminates the messiness of handling cash payments.</p>
+                <a type="button" class="btn btn-default ps-btn" href="simpel.html">
+                    <object data="images/svg/arrow-orange.svg" type="image/svg+xml" style="width:6px;"> </object>
+                    <span style="">LEARN MORE</span>
+                </a>
+            </div>
+          </div>
+        </div>
+
+    </div>
+</div>
+<!-- footer-->
+<div class='gradient-separation'></div>
+
+<footer class='footer-style'>
+    <div class='page-section footer-primary container'>
+        <div class="row" style="position: relative;">
+            <object data="images/svg/bd-logo-white.svg" type="image/svg+xml" class="bd-footer-logo" >
+                <p>BillDesk_Logo</p>
+            </object>
+            <div class="col-lg-2 col-sm-3 col-md-2 col-xs-6 footer-groups footer-width-adjust-overview">
+                <h4>OVERVIEW</h4>
+                <ul class="" style="list-style:none; padding-left:0px;">
+                    <li class="footer-items"><a href="payment-solutions.html">Payment Solutions</a></li>
+                    <li class="footer-items"><a href="benefits.html">Benefits</a></li>
+                    <li class="footer-items"><a href="technology.html">Technology</a></li>
+                    <li class="footer-items"><a href="partners.html">Partners</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-sm-3 col-md-2 col-xs-6 footer-groups footer-width-adjust-range">
+              <h4>RANGE OF SOLUTIONS</h4>
+                <ul class="" style="list-style:none; padding-left:0px;">
+                  <li class="footer-items"><a href="payments.html">Payment Gateway</a></li>
+                  <li class="footer-items"><a href="bills.html">Biller Network</a></li>
+                  <li class="footer-items"><a href="recharge.html">Recharge Solution</a></li>
+                  <li class="footer-items"><a href="recurring-payments.html">Recurring Payments</a></li>
+                  <li class="footer-items"><a href="business-2-business.html">B2B Payments</a></li>
+                  <li class="footer-items"><a href="simpel.html">Simpel Payments</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 footer-groups footer-width-adjust-core" style='margin-left: 0px;'>
+                <h4>CORE</h4>
+                <ul class="" style="list-style:none; padding-left:0px;">
+                  <li class="footer-items"><a href="about.html">About Us</a></li>
+                  <li class="footer-items"><a href="story.html">Our Story</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 footer-groups footer-width-adjust-joinus" style='margin-left: 0px;'>
+              <h4>JOIN US</h4>
+              <ul style="list-style:none; padding-left:0px;">
+                <!-- <li class="footer-items"><a href="careers.html">Life@BillDesk</a></li> -->
+                <li class="footer-items"><a href="careers.html">Careers</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2 col-sm-2 col-md-2 col-xs-6 footer-groups footer-width-adjust-touch">
+                <h4>GET IN TOUCH</h4>
+                <ul style="list-style:none; padding-left:0px;">
+                    <li class="footer-items"><a href="contact.html">Contact Us</a></li>
+                    <li class="footer-items"><a href="">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-sm-2 col-md-2 col-xs-6 footer-groups">
+                <h4 class='text-align-right'>ACCOUNT</h4>
+                <ul style="list-style:none; padding-left:0px;">
+                    <li class="footer-items text-align-right"><a href="">Sign In</a></li>
+                    <li class="footer-items text-align-right"><a href="">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class='page-section container footer-secondary'>
+        <div class='footer-logos container'>
+            <img class="footer-logo" src='images/index/rupay.png'/>
+            <img class="footer-logo" src='images/index/verified.png'/>
+            <img class="footer-logo" src='images/index/securecode.png'/>
+            <img class="footer-logo" src='images/index/safekey.png'/>
+            <img class="footer-logo" src='images/index/diners.png'/>
+            <img class="footer-logo" style='' src='images/index/iso.png'/>
+            <img class="footer-logo" style='' src='images/index/pci.png'/>
+        </div>
+    </div>
+
+      <div class="page-section container footer-tertiary">
+        <div class='footer-bottommost container'>
+          <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4">
+              <ul class="footer-bottommost-links">
+                  <li class="footer-bottommost-items"><a href="">Terms &amp; Conditions</a></li>
+                  <li class="footer-bottommost-items"><a href="">Privacy Policy</a></li>
+                  <li class="footer-bottommost-items"><a href="">Legal</a></li>
+              </ul>
+          </div>
+          <div class='col-sm-12 col-xs-12 col-md-4 col-lg-4'>
+            <div class='copyright'>IndiaIdeas Pvt. Ltd. 2016&nbsp;&bull;&nbsp;All Rights Reserved</div>
+          </div>
+          <div class='col-sm-12 col-xs-12 col-md-4 col-lg-4'>
+              <div class="social-icon-container">
+                  <div><img src='images/social/linkedin.svg' class='social-icon'/></div>
+                  <div class=''><img src='images/social/facebook.svg' class='social-icon'/></div>
+                  <div class=''><img src='images/social/twitter.svg' class='social-icon'/></div>
+              </div>
+          </div>
+      </div>
+
+</footer>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.dlmenu.js"></script>
+<script type="text/javascript">
+    $(".solution-images a").click(function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top
+        }, 1000);
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $("#bd-logo").fadeIn(4500);
+        ['#image2', '#image3', '#image4', '#image5', '#image6', '#image1'].forEach(function(image, pos) {
+            //$(image).delay(pos * 300).fadeIn(1000)
+            $(image).delay(pos * 700).animate({
+                opacity: 1,
+                height: '150px',
+                width: '125px'
+            }, 'slow');
+            $(image).animate({
+                opacity: 1,
+                height: '129px',
+                width: '112px'
+            }, 'slow');
+
+        })
+       /*$('#image4, #image3, #image6').each(function(fadeInDiv){
+         $(this).delay(fadeInDiv * 800).fadeIn(1000);
+       });*/
+    });
+</script>
+</body>
+</html>

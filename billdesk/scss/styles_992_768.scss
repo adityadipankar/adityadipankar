@@ -1,0 +1,103 @@
+@media (max-width: 992px) {
+    header {
+        .navbar-default .navbar-nav > li > a {
+            padding: 20px 8px;
+        }
+    }
+    .fact-border{
+        border-width: 0px 0px 1px 0px;
+        border-style: solid;
+        border-color: rgba(250,170,2,0.3);
+    }
+
+    $index-corousel-height : 670px;
+    .carousel {
+        .item {
+            /*height: $index-corousel-height;*/
+        }
+    }
+
+    .page-body {
+        .payments-sol-page-content {
+            .fact-border
+            {
+              border-width: 0px 0px 1px 0px;
+              border-style: solid;
+              border-color: rgba(255, 255, 255, 0.3);
+            }
+        }
+    }
+
+    #index-page-carousel {
+        .hexa-container {
+            .hexa-content {
+                height: $index-corousel-height;
+            }
+        }
+        #benefits-gradient.hexa-container
+        .hexa-content > a {
+            width: 61%;
+        }
+    }
+
+    .payment-sol-corousel {
+        .payment-sol-logo {
+            padding: 90px 0px;
+        }
+        .payment-sol-slide-text {
+            .slide-text {
+                > div {
+                    h3 {
+                        white-space: nowrap;
+                    }
+                }
+            }
+            button {
+                margin: 10px 0px 0px;
+            }
+        }
+    }
+
+    #simpel-page-carousel {
+        .payment-sol-logo {
+            padding: 70px 30px 28px
+        }
+    }
+    .page-body {
+        .story-timeline {
+            text-align: center;
+
+            .event-details img {
+                width: 50%;
+                margin: 0px auto;
+            }
+            .timeline-left {
+                border: none;
+            }
+            .timeline-left, .timeline-right {
+                .event-date:after {
+                    content: none;
+                }
+            }
+        }
+    }
+    #partner-page-carousel{
+        #partner-slide-1 {
+            img {
+                position: relative;
+                margin: 0px auto;
+                top: 0px;
+                margin-top: 70px;
+                width: auto;
+                height: 55%;
+            }
+            .slide-text {
+                width: 100%;
+                position: relative;
+                top: 0px;
+                margin: 0px auto;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <title>BillDesk</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles_1200.css">
+    <link rel="stylesheet" type="text/css" href="css/styles_992_768.css">
+    <link rel="stylesheet" type="text/css" href="css/styles_480_767.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/styles_320_479.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/component.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <style type="text/css">
+        .facts_section {
+            display: none;
+            position: relative;
+        }
+        .facts_section .close_fact_section {
+          position: absolute;
+          top: 0px;
+          z-index: 97;
+          right: 10px;
+          top: 10px;
+        }
+        .flip_fact {
+            -webkit-transform: rotateY(150deg)
+            transform: rotateY(150deg);
+        }
+    </style>
+</head>
+<body>
+  <header class="header">
+      <div class="header-container container"></div>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                  <!--span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar icon-bar-mod"></span>
+                  <span class="icon-bar icon-bar-mod"></span>
+                  <span class="icon-bar icon-bar-mod"></span-->
+
+              </button>
+              <a class="navbar-brand" href="index.html">
+                  <object data="images/svg/billdesk_logo_white.svg" type="image/svg+xml" class="bd-logo-white hidden-xs" >
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <object data="images/svg/billdesk_logo.svg" type="image/svg+xml" class="bd-logo hidden-xs" />
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <span class="visible-xs-inline-block">
+                  <object data="images/svg/bd-logo-color.svg" type="image/svg+xml" class="bd-logo-small" />
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <object data="images/svg/bd-logo-white.svg" type="image/svg+xml" class="bd-logo-small-white" >
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <span>
+            </a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="payment-solutions.html" class="dropdown-toggle header-links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class='solutions-dropdown-text'>Payment Solutions <span class="caret caret-mod"></span><div class="selected-menu-item"></div></a>
+                <ul class="dropdown-menu dropdown-mod payment-solutions-menu">
+                  <li><a href="payments.html" class='payment-gateway-button' style="color:#111;">Payment Gateway</a></li>
+                  <li><a href="bills.html" class='solutions-dropdown-text'>Biller Network</a></li>
+                  <li><a href="recharge.html" class='solutions-dropdown-text'>Recharge</a></li>
+                  <li><a href="recurring-payments.html" class='solutions-dropdown-text'>Recurring Payments</a></li>
+                  <li><a href="business-2-business.html" class='solutions-dropdown-text'>B2B Payments</a></li>
+                  <li><a href="simpel.html" class='solutions-dropdown-text'>Simpel</a></li>
+                  <div class='small-grey-separation'></div>
+                  <li class='all-payments-button'><a href="payment-solutions.html">View All Solutions</a></li>
+                </ul>
+              </li>
+              <li><a href="benefits.html">Benefits</a></li>
+              <li><a href="technology.html">Technology</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret caret-mod"></span></a>
+                <ul class="dropdown-menu dropdown-mod more-menu">
+                  <li><a href="about.html" class='payment-gateway-button'>About Us</a></li>
+                  <li><a href="careers.html" class='payment-gateway-button'>Careers</a></li>
+                  <li><a href="partners.html" class='payment-gateway-button'>Partners</a></li>
+                  <li><a href="contact.html" class='payment-gateway-button'>Contact Us</a></li>
+                  <li><a href="story.html" class='payment-gateway-button'>Our Story</a></li>
+                </ul>
+              </li>
+              <li><a href="index.html">Sign up&nbsp;
+                <!-- <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.84 16"><defs><style>.cls-1{}</style></defs><title>sign-in</title><path class="cls-1" d="M5.46,0.25A0.15,0.15,0,0,0,5.21.4V1.85a0.55,0.55,0,0,0,.25.43L9.83,4.81a0.55,0.55,0,0,1,.25.43v5.53a0.55,0.55,0,0,1-.25.43L5.46,13.73a0.55,0.55,0,0,0-.25.43v1.45a0.15,0.15,0,0,0,.25.14l6.13-3.54a0.55,0.55,0,0,0,.25-0.43V4.22a0.55,0.55,0,0,0-.25-0.43Z"/><polygon class="cls-1" points="4.03 4.91 3.54 5.41 5.79 7.66 0 7.66 0 8.36 5.79 8.36 3.54 10.61 4.03 11.1 7.13 8.01 4.03 4.91"/></svg> -->
+              </a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+
+          <div id="dl-menu" class="dl-menuwrapper visible-xs-block">
+              <button class="dl-trigger">Open Menu</button>
+              <ul class="dl-menu">
+                  <li>
+                      <a href="#">Payment Solutions
+                          <i class="glyphicon glyphicon-chevron-right" ></i>
+                      </a>
+                      <ul class="dl-submenu">
+                          <li class="dl-submenu-image">
+                              <img src='images/solutions/payments/logo-payments.png' class='dropdown-logos'/>
+                              <a href="payments.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 17px;'>Payments</a>
+                          </li>
+                          <li class="dl-submenu-image"><img src='images/solutions/bills/logo-bills.png' class='dropdown-logos'/><a href="bills.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 17px;'>Billers</a></li>
+                          <li class="dl-submenu-image"><img src='images/solutions/recharge/logo-recharge.png' class='dropdown-logos'/><a href="recharge.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 17px;'>Recharge</a></li>
+                          <li class="dl-submenu-image"><img src='images/solutions/recurring/logo-recurring.png' class='dropdown-logos'/><a href="recurring-payments.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 17px;'>Recurring</a></li>
+                          <li class="dl-submenu-image"><img src='images/solutions/b2b/logo-b2b.png' class='dropdown-logos'/><a href="business-2-business.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 17px;'>B2B</a></li>
+                          <li class="dl-submenu-image"><img src='images/solutions/simpel/logo-simpel.png' class='dropdown-logos'/><a href="simpel.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 17px;'>Simpel</a></li>
+                          <li class="dl-submenu-image" style='border-top: 1px solid #dedede;'><a href="payment-solutions.html" class='all-payments-button' style='padding: 13px 0px 13px 12px;color: #B3B3B3;'>All payment solutions</a></li>
+                      </ul>
+                  </li>
+                  <li><div class='gradient-separation'></div></li>
+                  <li><a href="benefits.html">Benefits</a><li>
+                  <li><div class='gradient-separation'></div></li>
+                  <li><a href="technology.html">Technology</a></li>
+                  <li><div class='gradient-separation'></div></li>
+                  <li >
+                      <a href="#" role="button" aria-haspopup="true" aria-expanded="false">More
+                          <i class="glyphicon glyphicon-chevron-right" ></i>
+                      </a>
+                      <ul class="dl-submenu">
+                          <li><a href="about.html">About Us</a></li>
+                          <li><div class='gradient-separation'></div></li>
+                          <li><a href="careers.html">Careers</a></li>
+                          <li><div class='gradient-separation'></div></li>
+                          <li><a href="partners.html">Partners</a></li>
+                      </ul>
+                  </li>
+                  <li><div class='gradient-separation'></div></li>
+                  <li><a href="index.html">Sign up&nbsp;<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.84 16"><defs><style>.cls-1{}</style></defs><title>sign-in</title><path class="cls-1" d="M5.46,0.25A0.15,0.15,0,0,0,5.21.4V1.85a0.55,0.55,0,0,0,.25.43L9.83,4.81a0.55,0.55,0,0,1,.25.43v5.53a0.55,0.55,0,0,1-.25.43L5.46,13.73a0.55,0.55,0,0,0-.25.43v1.45a0.15,0.15,0,0,0,.25.14l6.13-3.54a0.55,0.55,0,0,0,.25-0.43V4.22a0.55,0.55,0,0,0-.25-0.43Z"/><polygon class="cls-1" points="4.03 4.91 3.54 5.41 5.79 7.66 0 7.66 0 8.36 5.79 8.36 3.54 10.61 4.03 11.1 7.13 8.01 4.03 4.91"/></svg></a></li>
+              </ul>
+          </div>
+        </div><!-- /.container-fluid -->
+      </nav>
+  </header>
+
+<div class="page-body" >
+    <div id="payment-page-carousel" class="carousel slide page-carousel payment-sol-corousel" data-ride="carousel">
+        <!-- Indicators -->
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" id="payment-slide-1">
+                <div>
+                    <div class="container">
+                        <div class="row main-slide">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 payment-slide-content page-slide-content">
+                                <img src="images/solutions/payments/head.png" alt="" class="payment-img-logo payment-sol-logo"/>
+                                <div class="slide-text payment-sol-slide-text">
+                                    <div>
+                                        <img src="images/solutions/payments/logo-payments.png"  class='solutions-logos'>
+                                        <h1 class="solution-name">Payment Gateway</h1>
+                                        <h1 class="hidden-sm hidden-xs service-tagline">&nbsp;&nbsp;|&nbsp;&nbsp;</h1>
+                                        <h1 class="service-tagline">Secure &amp; Seamless</h1>
+                                    </div>
+                                    <p class='align-center solution-head-text'>Start accepting payments securely through web, mobile or app across widest payment options including cards, net banking and wallet options. BillDesk is a leading payment gateway company in India that has made consumer electronic payments easy and accessible to all. Our easy integration process lets you accept online payments faster.</p>
+                                </div>
+                                <img src='images/solutions/separator.png' class='orange-separator hidden-sm hidden-xs'/>
+                                <button type="button" class="btn hero-slide-button sign-up-small-button">
+                                    <object data="images/svg/arrow-orange.svg" type="image/svg+xml" class='sign-up-btn-arrow'> </object>
+                                    <span class="hero-btn-text">Sign up</span>
+                                </button>
+                                  <img src='images/solutions/payments/pg_header.png' class='merchant-img'/>
+                                      <!-- <span class="hidden-xs signup-text orange"> for BillDesk Payment Gateway.</span> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='gradient-separation'></div>
+
+    <div class='page-section-payments'>
+    <div class="container payments-content payments-sol-page-content page-section">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <h3 class="solutions-section-heading white">Comprehensive Payment Methods</h3>
+                <h4 class='solutions-section-subheading white'>Enhance business potential with BillDesk extensive payment methods</h4>
+                <div class="comp_pay_method">
+                    <div class='row payment_options'>
+                      <div class="col-md-3 col-sm-6" style='padding:30px 0px;'>
+                        <img class='payment-method-image' src='images/solutions/payments/credit-cards.png'/>
+                        <h4 class='payment-method-name'>Credit Cards</h4>
+                        <!-- <p>Power BillDesk across its payment solutions in India</p> -->
+                      </div>
+                      <div class="col-md-3 col-sm-6" style='padding:30px 0px;'>
+                        <img class='payment-method-image' src='images/solutions/payments/debit-cards.png'/>
+                        <h4 class='payment-method-name'>Debit Cards</h4>
+                        <!-- <p>Accept payments from a wide range of payment methods</p> -->
+                      </div>
+                      <div class="col-md-3 col-sm-6" style='padding:30px 0px;'>
+                        <img class='payment-method-image' src='images/solutions/payments/atm-cum-debit-cards.png'/>
+                        <h4 class='payment-method-name'>ATM-cum-Debit Cards</h4>
+                        <!-- <p>Enable BillDesk Biller Network for convenient bill, recharge payments</p> -->
+                      </div>
+                      <div class="col-md-3 col-sm-6" style='padding:30px 0px;'>
+                        <img class='payment-method-image' src='images/solutions/payments/net-banking.png'/>
+                        <h4 class='payment-method-name'>Net Banking</h4>
+                        <!-- <p>Partner with BillDesk for recuring payments through ACH/ECS</p> -->
+                      </div>
+                    </div>
+                    <div class='row payment_options'>
+                      <div class="col-md-3 col-sm-6" style='padding:30px 0px;'>
+                        <img class='payment-method-image' src='images/solutions/payments/emi.png'/>
+                        <h4 class='payment-method-name'>Online EMI</h4>
+                        <!-- <p>Power BillDesk across its payment solutions in India</p> -->
+                      </div>
+                      <div class="col-md-3 col-sm-6" style='padding:30px 0px;'>
+                        <img class='payment-method-image' src='images/solutions/payments/wallet.png'/>
+                        <h4 class='payment-method-name'>E-wallets &amp; Cash Cards</h4>
+                        <!-- <p>Accept payments from a wide range of payment methods</p> -->
+                      </div>
+                      <div class="col-md-3 col-sm-6" style='padding:30px 0px;'>
+                        <img class='payment-method-image' src='images/solutions/payments/imps.png'/>
+                        <h4 class='payment-method-name'>IMPS</h4>
+                        <!-- <p>Enable BillDesk Biller Network for convenient bill, recharge payments</p> -->
+                      </div>
+                      <div class="col-md-3 col-sm-6" style='padding:30px 0px;'>
+                        <img class='payment-method-image' src='images/solutions/payments/loyalty.png'/>
+                        <h4 class='payment-method-name'>Loyalty Points</h4>
+                        <!-- <p>Partner with BillDesk for recuring payments through ACH/ECS</p> -->
+                      </div>
+                    </div>
+                    <div class="facts_section payments-box" id="credit_card">
+                        <span class="close_fact_section"></span>
+                        <div class="row">
+                            <div class="col-sm-5 col-xs-12">
+                              <img src="images/solutions/payments/credit-card-big.png" class="img-responsive">
+                            </div>
+                            <div class="col-sm-7 col-xs-12">
+                                <p class='v_align align-center'><span class='small-payment-images-heading'>Credit Cards</span><br/>More than 30 Banks issue credit cards in India. The domestic transaction must conform to 2 factor authentication as mandated by RBI.<br/><br/>
+                                  <img src="images/partners/credit-cards/credit-cards-01.png" class='payment-page-logos'/>
+                                  <img src="images/partners/credit-cards/credit-cards-02.png" class='payment-page-logos'/>
+                                  <br/>
+                                  <img src="images/partners/credit-cards/credit-cards-03.png" class='payment-page-logos'/>
+                                  <img src="images/partners/credit-cards/credit-cards-04.png" class='payment-page-logos'/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facts_section payments-box" id="debit_card">
+                        <span class="close_fact_section"></span>
+                        <div class="row">
+                            <div class="col-sm-5 col-xs-12">
+                              <img src="images/solutions/payments/debit-card-big.png" class="img-responsive">
+                            </div>
+                            <div class="col-sm-7 col-xs-12">
+                                <p class='v_align align-center'><span class='small-payment-images-heading'>Debit Cards</span><br/>More than 50 Banks issue debit cards in India. The domestic transaction must conform to 2 factor authentication as mandated by RBI.<br/><br/>
+                                <img src="images/partners/debit-cards/debit-cards-01.png" class='payment-page-logos'/>
+                                <img src="images/partners/debit-cards/debit-cards-02.png" class='payment-page-logos'/>
+                                <img src="images/partners/debit-cards/debit-cards-03.png" class='payment-page-logos'/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facts_section payments-box" id="atm_card">
+                        <span class="close_fact_section"></span>
+                        <div class="row">
+                            <div class="col-sm-5 col-xs-12">
+                                <img src="images/solutions/payments/at-card-big.png" class="img-responsive">
+                            </div>
+                            <div class="col-sm-7 col-xs-12">
+                              <p class='v_align align-center'><span class='small-payment-images-heading'>Debit-cum-ATM Cards</span><br/>BillDesk has direct connectivity with 18 plus Banks in India which enables 2nd factor authentication via ATM pin. <br/><br/><span class='goto-about-text'><a href='partners.html'>Learn more</a></span> - for complete bank partners<br/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facts_section payments-box" id="net_banking">
+                        <span class="close_fact_section"></span>
+                        <div class="row">
+                            <div class="col-sm-5 col-xs-12">
+                                <img src="images/solutions/payments/net-banking-big.png" class="img-responsive">
+                            </div>
+                            <div class="col-sm-7 col-xs-12">
+                              <p class='v_align align-center'><span class='small-payment-images-heading'>Net Banking</span><br/>BillDesk offers 75 plus banks including retail and corporate net banking payment options in India.<br/><br/><span class='goto-about-text'><a href='partners.html'>Learn more</a></span> - for complete bank partners<br/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facts_section payments-box" id="online_emi">
+                        <span class="close_fact_section"></span>
+                        <div class="row">
+                            <div class="col-sm-5 col-xs-12">
+                                <img src="images/solutions/payments/online-emi-big.png" class="img-responsive">
+                            </div>
+                            <div class="col-sm-7 col-xs-12">
+                              <p class='v_align align-center'><span class='small-payment-images-heading'>Online EMI</span><br/>Online EMI is enabled for credit cards in India. The EMI amount is billed to the customer every month on his card. BillDesk offers Online EMI option with all Banks/Networks in India.<br/><br/><span class='goto-about-text'><a href='partners.html'>Learn more</a></span> - for complete bank partners<br/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facts_section payments-box" id="e_wallets">
+                        <span class="close_fact_section"></span>
+                        <div class="row">
+                            <div class="col-sm-5 col-xs-12">
+                                <img src="images/solutions/payments/wallets-big.png" class="img-responsive">
+                            </div>
+                            <div class="col-sm-7 col-xs-12">
+                              <p class='v_align align-center'><span class='small-payment-images-heading'>E-Wallets &amp; Cash Cards</span><br/>BillDesk offers 20 plus cash card, e-wallet options in India including Telecom, Bank, Network and non bank wallets etc.<br/><br/>
+                                <img src="images/partners/credit-cards/credit-cards-03.png" class='payment-page-logos'/>
+                                <img src="images/partners/wallets-all/wallets-all-05.png" class='payment-page-logos'/>
+                                <img src="images/partners/wallets-all/wallets-all-06.png" class='payment-page-logos'/>
+                                <img src="images/partners/wallets-all/wallets-all-02.png" class='payment-page-logos'/>
+                                <br/><br/><span class='goto-about-text'><a href='partners.html'>Learn more</a></span> - for complete wallet and cash card partners<br/>
+                              </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facts_section payments-box" id="imps">
+                        <span class="close_fact_section"></span>
+                        <div class="row">
+                            <div class="col-sm-5 col-xs-12">
+                                <img src="images/solutions/payments/imps-big.png" class="img-responsive">
+                            </div>
+                            <div class="col-sm-7 col-xs-12">
+                              <p class='v_align align-center'><span class='small-payment-images-heading'>IMPS</span><br/>IMPS is an inter-bank electronic fund transfer service and requires mobile money identifier (MMID) for transaction authentication<br/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facts_section payments-box" id="loyality_points">
+                        <span class="close_fact_section"></span>
+                        <div class="row">
+                            <div class="col-sm-5 col-xs-12">
+                                <img src="images/solutions/payments/loyalty-big.png" class="img-responsive">
+                            </div>
+                            <div class="col-sm-7 col-xs-12">
+                              <p class='v_align align-center'><span class='small-payment-images-heading'>Loyalty Points</span><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-section page-section-alternate">
+        <div class="container payments-content payments-sol-page-content">
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <h3 class="solutions-section-heading">Multiple Payment Channels</h3>
+                    <h4 class='solutions-section-subheading'>Maximize Business Potential by accepting payments from multiple Payment Channels</h4>
+                    <p class='align-center'>Accept payments the way your customers prefer, be it online, mobile or assisted through Kiosk/IVR.<br/>BillDesk’s simple architecture platform provides consistent user experience across all devices.</p>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            <div class="thumbnail thumbnail-mod">
+                                <img src="images/solutions/payments/mobile.png" class="img-responsive">
+                                <div class="caption">
+                                    <h4 class="merchant-categories">MOBILE</h4>
+                                    <p class="align-center multiple-payment-channels-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            <div class="thumbnail thumbnail-mod">
+                                <img src="images/solutions/payments/desktop-devices.png" class="img-responsive">
+                                <div class="caption">
+                                    <h4 class="merchant-categories">Desktop Devices</h4>
+                                    <p class="align-center multiple-payment-channels-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            <div class="thumbnail thumbnail-mod">
+                                <img src="images/solutions/payments/assisted-kiosk.png" class="img-responsive">
+                                <div class="caption">
+                                    <h4 class="merchant-categories">Assisted Kiosk</h4>
+                                    <p class="align-center multiple-payment-channels-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            <div class="thumbnail thumbnail-mod">
+                                <img src="images/solutions/payments/assisted-ivr.png" class="img-responsive">
+                                <div class="caption">
+                                    <h4 class="merchant-categories">Assisted IVRS</h4>
+                                    <p class="align-center multiple-payment-channels-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="payments-content payments-sol-page-content page-section page-section-alternate2 features">
+          <div class='container'>
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <h3 class="solutions-section-heading">All the features you need</h3>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="media features-box">
+                                <div class="media-left">
+                                    <img class="media-object small-payments-images" src="images/solutions/payments/Mobile-SDK-for-In-app-payments.png" alt="..." width="200">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="small-payment-images-heading">Mobile SDK for In-app payments</h4>
+                                    <p>Enhance your customer’s In-app payment experience with our powerful mobile SDK for Android and iOS platform.</p>
+                                </div>
+                            </div>
+                            <div class="media features-box">
+                                <div class="media-left">
+                                        <img class="media-object small-payments-images" src="images/solutions/payments/Intuitive-Customer-Interface.png" alt="..." width="200">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading small-payment-images-heading">Intuitive Customer Interface</h4>
+                                    <p>Our interface has a simple, elegant responsive design that is easy to navigate ensuring your customers get a seamless payment experience.</p>
+                                </div>
+                            </div>
+                            <div class="media features-box">
+                                <div class="media-left">
+                                        <img class="media-object small-payments-images" src="images/solutions/payments/powerful-management-dashboard.png" alt="..." width="200">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading small-payment-images-heading">Powerful Management Dashboard</h4>
+                                    <p>Get access to a feature-rich platform and monitor real time transaction activity from tracking and analysing to generating consolidated reports or initiating refunds.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="media features-box">
+                                <div class="media-left">
+                                        <img class="media-object small-payments-images" src="images/solutions/payments/intelligent-retry-options.png" alt="..." width="200">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading small-payment-images-heading">Intelligent Retry Options</h4>
+                                    <p>Ease customer anxiety with high payment conversions ensured with an intelligent retry option.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="media features-box">
+                                <div class="media-left">
+                                        <img class="media-object small-payments-images" src="images/solutions/payments/prompt-payment-response.png" alt="..." width="200">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading small-payment-images-heading">Prompt Payment Response</h4>
+                                    <p>Receive detailed information about every transaction with our unique Prompt Payment Response feature.</p>
+                                </div>
+                            </div>
+                            <div class="media features-box">
+                                <div class="media-left">
+                                        <img class="media-object small-payments-images" src="images/solutions/payments/integrated-card-store.png" alt="..." width="200">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading small-payment-images-heading">Integrated Card Store</h4>
+                                    <p>Offer transaction convenience to regular customers with our Secure Card Store feature that quickens the payment process.</p>
+                                </div>
+                            </div>
+                            <div class="media features-box">
+                                <div class="media-left">
+                                        <img class="media-object small-payments-images" src="images/solutions/payments/relevant-risk-management-and-control.png" alt="...">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading small-payment-images-heading">Relevant Risk Management and control</h4>
+                                    <p>Flexible platform with in-built ‘control requirements’ enabling limits for transaction numbers, values, times, etc., which helps manage and track risk levels of all transactions.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="media features-box">
+                                <div class="media-left">
+                                        <img class="media-object small-payments-images" src="images/solutions/payments/advanced-management-tools.png" alt="..." width="200">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading small-payment-images-heading">Remittance Split and convenient routing</h4>
+                                    <p>A customised solution which enables flexible remittance split and convenient transaction routing options.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-section-alternate page-section biller-facts-background">
+          <div class="container bills-content payments-sol-page-content universal-bill">      <!-- Section 6 -->
+              <div class="row">
+                  <div class="col-sm-12 col-md-12">
+                      <h3 class="solutions-section-heading">Enabled &amp; powered by</h3>
+                  </div>
+              </div>
+
+              <div class='page-section' class='biller-facts'>
+                <div class='container'>
+                  <div class='row'>
+                    <div class="col-md-4 col-sm-12 col-xs-12 fact-border">
+                      <h1 class='fact-number'>45+</h1>
+                      <h4 class='fact-name'>Banks</h4>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12 fact-border">
+                      <h1 class='fact-number'>10+</h1>
+                      <h4 class='fact-name'>Wallets</h4>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                      <h1 class='fact-number'>20+</h1>
+                      <h4 class='fact-name'>Organisations</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+        </div>
+
+        <div class="page-section">
+            <div class="container payments-content payments-sol-page-content">
+                <div class="row" style="margin-bottom: 0;">
+                    <div class="col-sm-12 col-md-12">
+                        <h3 class="solutions-section-heading">Merchant Categories</h3>
+                        <h4 class='solutions-section-subheading'>Our feature-rich payment gateway powers all possible types of organizations of all sizes across multiple sectors.<br/>A glimpse into our client network</h4>
+                        <ul class="nav nav-tabs nav-tabs-mod" role="tablist" id="payment_merchant_tabs">
+                            <li role="presentation" class="active"><a href="#government_merchants" class='partner-tab' aria-controls="messages" role="tab" data-toggle="tab">Government</a></li>
+                            <li role="presentation"><a href="#ecommerce_merchants" class='partner-tab' aria-controls="profile" role="tab" data-toggle="tab">Ecommerce</a></li>
+                            <li role="presentation"><a href="#travel_merchants" class='partner-tab' aria-controls="home" role="tab" data-toggle="tab">Travel</a></li>
+                            <li role="presentation"><a href="#education_merchants" class='partner-tab' aria-controls="home" role="tab" data-toggle="tab">Education</a></li>
+                            <!-- <li role="presentation"><a href="#other_merchants" class='partner-tab' aria-controls="home" role="tab" data-toggle="tab">Others</a></li> -->
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="government_merchants">
+                              <div class="row">
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/government/government-01.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/government/government-02.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/government/government-03.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/government/government-04.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/government/government-05.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6"></div>
+                              </div>
+                                <div class='container page-section'>
+                                    <img src='images/solutions/payments/pg_government.png' class='merchants-bg-img'/>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="ecommerce_merchants">
+                              <div class="row">
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/ecommerce/ecommerce-01.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/ecommerce/ecommerce-02.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/ecommerce/ecommerce-03.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/ecommerce/ecommerce-04.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/ecommerce/ecommerce-05.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6"></div>
+                              </div>
+                              <div class='container page-section'>
+                                    <img src='images/solutions/payments/pg_ecommerce.png' class='merchants-bg-img'/>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="travel_merchants">
+                              <div class="row">
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/travel/travel-01.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/travel/travel-02.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/travel/travel-03.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/travel/travel-04.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/travel/travel-05.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6"></div>
+                              </div>
+                              <div class='container page-section'>
+                                    <img src='images/solutions/payments/pg_travel.png' class='merchants-bg-img'/>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="education_merchants">
+                              <div class="row">
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/education/education-01.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/education/education-02.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/education/education-03.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/education/education-04.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/merchant-categories/payment-gateway/education/education-05.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6"></div>
+                              </div>
+                              <div class='container page-section'>
+                                    <img src='images/solutions/payments/pg_education.png' class='merchants-bg-img'/>
+                                </div>
+                            </div>
+                            <!-- <div role="tabpanel" class="tab-pane" id="other_merchants">
+                              <div class="row">
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/partners/debit-cards/debit-cards-01.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/partners/credit-cards/credit-cards-02.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/partners/credit-cards/credit-cards-04.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/partners/credit-cards/credit-cards-03.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/partners/debit-cards/debit-cards-02.png" />
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-xs-6">
+                                    <img src="images/partners/debit-cards/debit-cards-03.png" />
+                                </div>
+                              </div>
+                            </div> -->
+                        </div>
+                        <!--div class="merchant-categories-group">
+                            <div class="col-xs-6 col-sm-4">
+                                <ul class="list-group" style="background-color:transparent;">
+                                    <li><h4>Government</h4></li>
+                                    <li><h4>Pharma</h4></li>
+                                    <li><h4>Logistics</h4></li>
+                                    <li><h4>Financial Services</h4></li>
+                                    <li><h4>Ecommerce</h4></li>
+                                    <li><h4>Education</h4></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6 col-sm-4">
+                                <ul class="list-group" style="background-color:transparent;">
+                                    <li><h4>Auto &amp; Anciliaries</h4></li>
+                                    <li><h4>Entertainment &amp; Gaming</h4></li>
+                                    <li><h4>Utilities</h4></li>
+                                    <li><h4>Donation &amp; Charity</h4></li>
+                                    <li><h4>Retail</h4></li>
+                                    <li><h4>Grocery</h4></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6 col-sm-4">
+                                <ul class="list-group" style="background-color:transparent;">
+                                    <li><h4>Consumer Durables</h4></li>
+                                    <li><h4>Hotels</h4></li>
+                                    <li><h4>Telecom &amp; DTH</h4></li>
+                                    <li><h4>Stock Brokers &amp; Mutual Funds</h4></li>
+                                    <li><h4>Travel</h4></li>
+									                  <li><h4>FMCG &amp; Consumer Goods</h4></li>
+                                </ul>
+                            </div>
+                        </div-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--div class='page-section container'>
+          <img src='images/solutions/payments/merchants_bw.png' class='merchants-bg-img'/>
+        </div-->
+
+        <!-- footer-->
+        <div class='gradient-separation'></div>
+        <footer class='footer-style'>
+            <div class='page-section footer-primary container'>
+                <div class="row" style="position: relative;">
+                    <object data="images/svg/bd-logo-white.svg" type="image/svg+xml" class="bd-footer-logo" >
+                        <p>BillDesk_Logo</p>
+                    </object>
+                    <div class="col-lg-2 col-sm-3 col-md-2 col-xs-6 footer-groups footer-width-adjust-overview">
+                        <h4>OVERVIEW</h4>
+                        <ul class="" style="list-style:none; padding-left:0px;">
+                            <li class="footer-items"><a href="payment-solutions.html">Payment Solutions</a></li>
+                            <li class="footer-items"><a href="benefits.html">Benefits</a></li>
+                            <li class="footer-items"><a href="technology.html">Technology</a></li>
+                            <li class="footer-items"><a href="partners.html">Partners</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-sm-3 col-md-2 col-xs-6 footer-groups footer-width-adjust-range">
+                      <h4>RANGE OF SOLUTIONS</h4>
+                        <ul class="" style="list-style:none; padding-left:0px;">
+                          <li class="footer-items"><a href="payments.html">Payment Gateway</a></li>
+                          <li class="footer-items"><a href="bills.html">Biller Network</a></li>
+                          <li class="footer-items"><a href="recharge.html">Recharge Solution</a></li>
+                          <li class="footer-items"><a href="recurring-payments.html">Recurring Payments</a></li>
+                          <li class="footer-items"><a href="business-2-business.html">B2B Payments</a></li>
+                          <li class="footer-items"><a href="simpel.html">Simpel Payments</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 footer-groups footer-width-adjust-core" style='margin-left: 0px;'>
+                        <h4>CORE</h4>
+                        <ul class="" style="list-style:none; padding-left:0px;">
+                          <li class="footer-items"><a href="about.html">About Us</a></li>
+                          <li class="footer-items"><a href="story.html">Our Story</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 footer-groups footer-width-adjust-joinus" style='margin-left: 0px;'>
+                      <h4>JOIN US</h4>
+                      <ul style="list-style:none; padding-left:0px;">
+                        <!-- <li class="footer-items"><a href="careers.html">Life@BillDesk</a></li> -->
+                        <li class="footer-items"><a href="careers.html">Careers</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-sm-2 col-md-2 col-xs-6 footer-groups footer-width-adjust-touch">
+                        <h4>GET IN TOUCH</h4>
+                        <ul style="list-style:none; padding-left:0px;">
+                            <li class="footer-items"><a href="contact.html">Contact Us</a></li>
+                            <li class="footer-items"><a href="">Support</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-sm-2 col-md-2 col-xs-6 footer-groups">
+                        <h4 class='text-align-right'>ACCOUNT</h4>
+                        <ul style="list-style:none; padding-left:0px;">
+                            <li class="footer-items text-align-right"><a href="">Sign In</a></li>
+                            <li class="footer-items text-align-right"><a href="">Sign Up</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class='page-section container footer-secondary'>
+                <div class='footer-logos container'>
+                    <img class="footer-logo" src='images/index/rupay.png'/>
+                    <img class="footer-logo" src='images/index/verified.png'/>
+                    <img class="footer-logo" src='images/index/securecode.png'/>
+                    <img class="footer-logo" src='images/index/safekey.png'/>
+                    <img class="footer-logo" src='images/index/diners.png'/>
+                    <img class="footer-logo" style='' src='images/index/iso.png'/>
+                    <img class="footer-logo" style='' src='images/index/pci.png'/>
+                </div>
+            </div>
+
+              <div class="page-section container footer-tertiary">
+                <div class='footer-bottommost container'>
+                  <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4">
+                      <ul class="footer-bottommost-links">
+                          <li class="footer-bottommost-items"><a href="">Terms &amp; Conditions</a></li>
+                          <li class="footer-bottommost-items"><a href="">Privacy Policy</a></li>
+                          <li class="footer-bottommost-items"><a href="">Legal</a></li>
+                      </ul>
+                  </div>
+                  <div class='col-sm-12 col-xs-12 col-md-4 col-lg-4'>
+                    <div class='copyright'>IndiaIdeas Pvt. Ltd. 2016&nbsp;&bull;&nbsp;All Rights Reserved</div>
+                  </div>
+                  <div class='col-sm-12 col-xs-12 col-md-4 col-lg-4'>
+                      <div class="social-icon-container">
+                          <div><img src='images/social/linkedin.svg' class='social-icon'/></div>
+                          <div class=''><img src='images/social/facebook.svg' class='social-icon'/></div>
+                          <div class=''><img src='images/social/twitter.svg' class='social-icon'/></div>
+                      </div>
+                  </div>
+              </div>
+
+        </footer>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.dlmenu.js"></script>
+<script type="text/javascript">
+    $.fn.animateRotate = function(angle, duration, easing, complete) {
+      var args = $.speed(duration, easing, complete);
+      var step = args.step;
+      return this.each(function(i, e) {
+        args.complete = $.proxy(args.complete, e);
+        args.step = function(now) {
+          $.style(e, 'transform', 'rotateY(' + now + 'deg)');
+          if (step) return step.apply(e, arguments);
+        };
+
+        $({deg: 0}).animate({deg: angle}, args);
+      });
+    };
+
+    /*$('.rotate').click(function() {
+        rotation += 5;
+        $(this).rotate(rotation);
+    });*/
+
+    $('#payment_merchant_tabs a, #comp_pay_method a ').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    });
+    $('#all-the-methods >div').on('click', function() {
+        var section = $(this).attr('section');
+        $('.facts_section').hide();
+        $('.payment_options').hide();
+        $('#' + section).show();
+        /*$(this).animateRotate(90, 1000, 'linear', function () {
+        });*/
+    });
+    $('.close_fact_section').on('click', function() {
+        $('.payment_options >div').css("transform", 'none');
+        $('.facts_section').hide();
+        $('.payment_options').show();
+    })
+</script>
+</body>
+</html>

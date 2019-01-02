@@ -1,0 +1,635 @@
+@media (max-width: 767px) {
+
+  $bill-desk-primary-orange: #F37321;
+  $bill-desk-primary-grey: #222c3e;
+  $bill-desk-secondary-grey: #829ca2;
+  $bill-desk-blue: #3c828c;
+  $bill-desk-title-blue: #3e6786;
+
+  $index-corousel-height : 570px;
+  $index-corousel-padding : 10px;
+
+  $benefits-corousel-height: 400px;
+
+  .row > [class*='col-'] {
+      margin-right: 0px;
+      padding: 0px 10px;
+  }
+
+  h1 {
+      font-size: 25px;
+      margin-bottom: 15px;
+      line-height: 27px;
+      margin-top: 0px;
+  }
+  h2{
+    font-family: "gotham-bold", sans-serif;
+    letter-spacing: -1.6px;
+    font-size: 40px;
+  }
+  h3{
+    letter-spacing: -1.3px;
+    font-size: 24px;
+    font-family: "gotham-medium";
+    color:$bill-desk-primary-grey;
+    margin: 0;
+    padding: 0;
+  }
+  h4 {
+      color: $bill-desk-title-blue;
+      -webkit-font-smoothing: antialiased;
+      font-size: 14px;
+      font-family: "gotham-regular", sans-serif;
+  }
+  p {
+      font-family: "gotham-regular", sans-serif;
+      font-size: 13px;
+      line-height: 21px;
+      color: $bill-desk-primary-grey;
+  }
+  .slide-btn{
+    padding: 3px 11px;
+    border: 1px solid rgba(255,255,255,0.5);
+    .hero-btn-text{
+        font-family: "gotham-bold";
+        margin-left: 0px;
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+  }
+  .hero-slides{
+    margin: 0px 0px auto auto;
+  }
+  .solutions-section-heading{
+    font-family: "gotham", sans-serif;
+    text-align: center;
+
+    &:after {
+      content: '';
+      width: 60px;
+      height: 2px;
+      background: $bill-desk-primary-orange;
+      opacity: 1;
+      margin: 8px auto 0px auto;
+      display: block;
+    }
+  }
+  .solutions-section-heading-left{
+      font-family: "gotham", sans-serif;
+      text-align: center;
+      margin: 20px 0px 10px 0px;
+      &:after{
+      content: '';
+      width: 60px;
+      height: 3px;
+      background: $bill-desk-primary-orange;
+      opacity: 1;
+      margin: 18px auto 10px auto;
+      display: block;
+      }
+    }
+    .solutions-section-subheading {
+    line-height: 21px;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+    color: #829ca2;
+    margin-top: 0px;
+    }
+  .blockquote {
+      text-align: center;
+      line-height: 34px;
+      letter-spacing: -0.3px;
+      color: white;
+      font-family: "gotham-regular";
+      text-shadow: 0px 0px 11px rgba(0, 0, 0, 0.2);
+  }
+
+  #index-page-carousel{
+    height: $index-corousel-height;
+    .carousel-inner {
+        z-index: 2;
+        position: relative;
+        background: none;
+    }
+    .carousel-inner-container{
+      height:600px;
+    }
+    .item{
+      height: 575px;
+    }
+  }
+
+  .hero-slide-text{
+    p{
+      width:auto;
+      font-size: 14px;
+    }
+  }
+    .dropdown:hover .dropdown-menu {
+        display: none;
+        margin-top: 0; // remove the gap so it doesn't close
+     }
+     .dropdown.open:hover .dropdown-menu {
+        display: block;
+        margin-top: 0; // remove the gap so it doesn't close
+     }
+     .carousel-indicators{
+       position: absolute;
+       bottom: 5px;
+       left: 50%;
+     }
+    .carousel-indicators > span {
+        top: 4px;
+        float: right;
+        margin-left: 6px;
+    }
+    header {
+        .navbar-default {
+            margin-bottom: 0px;
+
+            .navbar-nav{
+                background-color: #e7e7e7;
+                margin: 0px -15px;
+                max-height: 90vh;
+                overflow-y: auto;
+                height: auto;
+
+
+                >li> a {
+                    color: #777;
+                    svg {
+                        fill: #777;
+                    }
+                }
+            }
+
+            .navbar-dark {
+                >li>a {
+                    color: #758191;
+                }
+            }
+
+            .navbar-header {
+                .navbar-toggle{
+                    border:none;
+                    margin-top:0px;
+                    margin-right:13px;
+                    .icon-bar-mod{
+                      background-color: rgba(255,255,255,0.8);
+                    }
+                    &:hover{
+                      background-color:none;
+                    }
+                    &:focus{
+                      background-color:none;
+                    }
+                }
+                .navbar-brand {
+                    margin: 0px 15px;
+                }
+            }
+        }
+
+        &.header-sticky {
+            .navbar-default {
+                .navbar-header {
+                    .icon-bar-mod {
+                        background-color: #888;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .footer-logo {
+          &:last-child {
+              float: left;
+          }
+
+          &:nth-last-child(2) {
+              float: left;
+          }
+        }
+        .bd-footer-logo {
+            height: 400px;
+            position: absolute;
+            bottom: -150px;
+            left: -93px;
+            opacity: 0.6;
+            display: none;
+        }
+        .footer-groups{
+          // width: 100%;
+          margin: 20px 0px 30px 0px;
+        }
+        .footer-mob-mod{
+          margin-left: 0px;
+        }
+        .social-icon-container {
+
+            >div {
+                margin-top: 15px;
+                float: none;
+            }
+        }
+        .footer-width-adjust-overview{
+            width: 50%;
+        }
+          .footer-width-adjust-range{
+            width: 50%;
+        }
+          .footer-width-adjust-core{
+            width: 50%;
+        }
+          .footer-width-adjust-joinus{
+            width: 50%;
+        }
+          .footer-width-adjust-touch{
+
+        }
+        .text-align-right {
+            text-align: left;
+        }
+    }
+    #index-page-carousel {
+        .item {
+            height: auto;
+        }
+        .carousel-inner-container {
+            height: $index-corousel-height;
+        }
+        .hexa-container {
+            .hexa-content {
+                height: $index-corousel-height;
+                padding-top: $index-corousel-padding;
+                >a {
+                    position: relative;
+                    top: initial;
+                    transform: none;
+                    // height: 55%;
+                    margin: 0px auto;
+                    margin-top: 0px;
+                    width: auto;
+                }
+            }
+            .hero-slide-text p {
+              width: 100%;
+              text-align: center;
+              font-size: 14px;
+              line-height: 18px;
+              margin: 0px 0px 20px 0px;            }
+            img {
+                // height: 100%;
+                position: relative;
+                top: initial;
+                width: auto;
+                max-height: 280px;
+            }
+        }
+        #benefits-gradient.hexa-container {
+            h2{
+              font-size: 25px;
+              margin-bottom: 15px;
+              line-height: 33px;
+              margin-top: 0px;
+            }
+            .hero-slide-text {
+                width: 100%;
+                text-align: center;
+                position: relative;
+                top: initial;
+                transform: none;
+            }
+            .hexa-content>a {
+              top: inherit;
+              width: initial;
+            }
+        }
+        #payments-gradient, #pref-payments-gradient, #bills-gradient
+            ,#portal-gradient {
+            .hero-slide-text {
+                position: relative;
+                top: initial;
+                width: 100%;
+                text-align: center;
+                transform: none;
+            }
+            h2{
+              font-size: 25px;
+              margin-bottom: 15px;
+              line-height: 33px;
+              margin-top: 0px;
+            }
+
+        }
+        #bills-gradient {
+            img {
+                // height: 100%;
+            }
+        }
+        /*#portal-gradient {
+            img {
+                position: relative;
+                top: initial;
+                transform: none;
+                // height: 100%;
+            }
+        }*/
+    }
+    #payment-sol-page-carousel {
+        .item, .carousel-inner {
+          height: 670px;
+        }
+        #payment-sol-slide-1 {
+            .solution-images {
+                height: 75%;
+                width: 70%;
+                margin: 0px auto;
+                position: relative;
+                margin-top: 30px;
+            }
+            .slide-text {
+                position: relative;
+                top: 15px;
+                width: 100%;
+                text-align: center;
+                right: initial;
+            }
+        }
+    }
+    #benifits-page-carousel {
+        #benefits-slide-1, #benefits-slide-2{
+            .slide-text {
+                width: 100%;
+                white-space: initial;
+                transform: none;
+                bottom: 20%;
+                top: inherit;
+                text-align: center;
+                p {
+                  text-align: center;
+                  max-width: 100%;
+                }
+            }
+            .slide-image {
+                top: 0px;
+                // height: 50%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+            }
+        }
+    }
+    #technology-page-carousel{
+        .page-slide-content {
+
+        }
+        #technology-slide-1 {
+            >div {
+              height: 500px;
+            }
+            .slide-text {
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+                transform: none;
+                p {
+                  text-align: center;
+                  font-size: 14px;
+                  line-height: 18px;
+                  width: 100%;
+                }
+
+            }
+            .technology-head-slide {
+                right: 50%;
+                width: 100%;
+                transform: translateX(50%);
+            }
+        }
+
+    }
+    #partner-page-carousel{
+        #partner-slide-1 {
+            img {
+                position: relative;
+                margin: 0px auto;
+                top: 0px;
+                margin-top: 70px;
+                width: auto;
+                height: 55%;
+            }
+            .slide-text {
+                width: 100%;
+                position: relative;
+                top: 0%;
+                margin: 0px auto;
+                text-align: center;
+                padding-top: 40px;
+
+                p {
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+
+    .page-body {
+        .payment-sol-content {
+            h3, p {
+                text-align: center;
+            }
+            .btn {
+                margin: 0px auto 30px auto;
+            }
+        }
+        .b2b-content {
+            h3 {
+                white-space: initial;
+                text-align: center;
+            }
+        }
+        .about-content {
+            &.subsidary {
+                img {
+                    margin: 20px 0px;
+                }
+            }
+        }
+        &.story-timeline {
+            .timeline-left {
+                border: none;
+            }
+        }
+        .payments-sol-page-content {
+            .fact-border {
+                border-right: 0px;
+            }
+        }
+        .about-page-content {
+            .universal-bill {
+                a {
+                    margin-top: 10px;
+                    display: inline-block;
+                }
+            }
+        }
+        .light-bg-block, .dark-bg-block {
+            p {
+                width: 88%;
+                line-height: 20px;
+            }
+        }
+        .latest-bg-block p {
+            width: 100%;
+        }
+    }
+    .features-box {
+        .media-left {
+            padding: 0px;
+        }
+    }
+    .story-logo-pos {
+        position: absolute;
+        left: 50%;
+        top: 48%;
+        z-index: 97;
+        transform: translate(-50%, 50%);
+        right: auto;
+    }
+    .dark-bg-block{
+      p{
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+    .light-bg-block{
+      p{
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+    .latest-bg-block{
+      p{
+        width: auto;
+      }
+    }
+    .app-download {
+        margin: 15px auto 0px;
+        a {
+            margin: 0px auto;
+
+        }
+    }
+    .app-download-button {
+        margin-right: 0px;
+    }
+
+    /* Payment solutions content */
+
+    .payment-sol-corousel, #simpel-page-carousel {
+        .payment-sol-logo {
+            width: auto;
+            margin: 0px auto;
+            height: 70%;
+            padding-bottom: 0;
+            padding: 70px 0px 0px;
+        }
+        .payment-sol-slide-text {
+            position: relative;
+            top: initial;
+            width: 100%;
+            text-align: center;
+            padding: 0px;
+
+            >div {
+                margin-bottom: 0px;
+                h3 {
+                    display: block;
+                }
+            }
+
+            p:last-child {
+                margin: 0px auto;
+                float: none;
+            }
+        }
+        .sign-up-small-button {
+            margin: 15px auto 0px;
+        }
+    }
+
+    .payment-sol-corousel{
+      .payment-sol-slide-text{
+        margin: 60px 0px 0px 0px;
+      }
+    }
+    .solution-name{
+      font-size: 25px;
+      letter-spacing: -1.6px;
+      vertical-align: bottom;
+      margin-top: 25px;
+    }
+    .service-tagline{
+      font-family:"gotham";
+      color:$bill-desk-primary-grey;
+      letter-spacing: -0.6px;
+      font-size: 21px;
+    }
+    .contact-location, .contact-location p{
+      text-align: center
+    }
+
+    .benefits-content {
+      text-align: center;
+        p {
+          text-align: center;
+        }
+    }
+
+    /*Merchant dropdown style for all pages.*/
+    .merchant-dropdown {
+      margin: 0px auto;
+
+      >button {
+        background: #f37321;
+        color: #fff;
+        border-radius: 16px;
+        padding: 5px 40px;
+        border: 0px;
+        font-weight: 400;
+        font-family: "gotham-medium";
+
+      }
+
+      &>ul>li {
+        padding: 10px 5px;
+        a {
+          text-align: center;
+          font-weight: 400;
+          font-family: "gotham-medium";
+
+        }
+        &.active {
+          background: #f37321;
+          color: #fff;
+          >a {
+            background: #f37321;
+          }
+        }
+      }
+    }
+
+    /*Payment sol page*/
+    .all-payment-solutions .margin-adjustment {
+      margin-top: 40px;
+    }
+
+
+}
+.fact-number{
+  margin-top: 20px;
+}
+

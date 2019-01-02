@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <title>BillDesk</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles_1200.css">
+    <link rel="stylesheet" type="text/css" href="css/styles_992_768.css">
+    <link rel="stylesheet" type="text/css" href="css/styles_480_767.css">
+    <link rel="stylesheet" type="text/css" href="css/bubble-slide/bubble-slide.css">
+    <link rel="stylesheet" type="text/css" href="css/component.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/styles_320_479.css"> -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+</head>
+<body>
+  <header class="header">
+      <div class="header-container container"></div>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                  <!--span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar icon-bar-mod"></span>
+                  <span class="icon-bar icon-bar-mod"></span>
+                  <span class="icon-bar icon-bar-mod"></span-->
+
+              </button>
+              <a class="navbar-brand" href="index.html">
+                  <object data="images/svg/billdesk_logo_white.svg" type="image/svg+xml" class="bd-logo-white hidden-xs" >
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <object data="images/svg/billdesk_logo.svg" type="image/svg+xml" class="bd-logo hidden-xs" />
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <span class="visible-xs-inline-block">
+                  <object data="images/svg/bd-logo-color.svg" type="image/svg+xml" class="bd-logo-small" />
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <object data="images/svg/bd-logo-white.svg" type="image/svg+xml" class="bd-logo-small-white" >
+                      <p>BillDesk_Logo</p>
+                  </object>
+                  <span>
+            </a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="payment-solutions.html" class="dropdown-toggle header-links selected-menu-item" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class='solutions-dropdown-text'>Payment Solutions <span class="caret caret-mod"></span><div></div></a>
+                <ul class="dropdown-menu dropdown-mod payment-solutions-menu">
+                  <li><a href="payments.html" class='payment-gateway-button'>Payment Gateway</a></li>
+                  <li><a href="bills.html" class='solutions-dropdown-text' style="color:#111;">Biller Network</a></li>
+                  <li><a href="recharge.html" class='solutions-dropdown-text'>Recharge</a></li>
+                  <li><a href="recurring-payments.html" class='solutions-dropdown-text'>Recurring Payments</a></li>
+                  <li><a href="business-2-business.html" class='solutions-dropdown-text'>B2B Payments</a></li>
+                  <li><a href="simpel.html" class='solutions-dropdown-text'>Simpel</a></li>
+                  <div class='small-grey-separation'></div>
+                  <li class='all-payments-button'><a href="payment-solutions.html">View All Solutions</a></li>
+                </ul>
+              </li>
+              <li><a href="benefits.html">Benefits</a></li>
+              <li><a href="technology.html">Technology</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret caret-mod"></span></a>
+                <ul class="dropdown-menu dropdown-mod more-menu">
+                  <li><a href="about.html" class='payment-gateway-button'>About Us</a></li>
+                  <li><a href="careers.html" class='payment-gateway-button'>Careers</a></li>
+                  <li><a href="partners.html" class='payment-gateway-button'>Partners</a></li>
+                  <li><a href="contact.html" class='payment-gateway-button'>Contact Us</a></li>
+                  <li><a href="story.html" class='payment-gateway-button'>Our Story</a></li>
+                </ul>
+              </li>
+              <li><a href="index.html">Sign up&nbsp;
+                <!-- <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.84 16"><defs><style>.cls-1{}</style></defs><title>sign-in</title><path class="cls-1" d="M5.46,0.25A0.15,0.15,0,0,0,5.21.4V1.85a0.55,0.55,0,0,0,.25.43L9.83,4.81a0.55,0.55,0,0,1,.25.43v5.53a0.55,0.55,0,0,1-.25.43L5.46,13.73a0.55,0.55,0,0,0-.25.43v1.45a0.15,0.15,0,0,0,.25.14l6.13-3.54a0.55,0.55,0,0,0,.25-0.43V4.22a0.55,0.55,0,0,0-.25-0.43Z"/><polygon class="cls-1" points="4.03 4.91 3.54 5.41 5.79 7.66 0 7.66 0 8.36 5.79 8.36 3.54 10.61 4.03 11.1 7.13 8.01 4.03 4.91"/></svg> -->
+              </a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+
+          <div id="dl-menu" class="dl-menuwrapper visible-xs-block">
+              <button class="dl-trigger">Open Menu</button>
+              <ul class="dl-menu">
+                  <span class="close_fact_section close"></span>
+                  <li>
+                      <a href="#">Payment Solutions
+                          <i class="glyphicon glyphicon-chevron-right glyphicon-mod" ></i>
+                      </a>
+                      <ul class="dl-submenu">
+                          <li class="dl-submenu-image">
+                              <img src='images/solutions/payments/logo-payments.png' class='dropdown-logos'/>
+                              <a href="payments.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Payments Gateway</a>
+
+                          </li>
+                          <li class="dl-submenu-image"><img src='images/solutions/bills/logo-bills.png' class='dropdown-logos'/><a href="bills.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Billers Network</a></li>
+                          <li class="dl-submenu-image"><img src='images/solutions/recharge/logo-recharge.png' class='dropdown-logos'/><a href="recharge.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Recharge</a></li>
+                          <li class="dl-submenu-image"><img src='images/solutions/recurring/logo-recurring.png' class='dropdown-logos'/><a href="recurring-payments.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Recurring Payments</a></li>
+                          <li class="dl-submenu-image"><img src='images/solutions/b2b/logo-b2b.png' class='dropdown-logos'/><a href="business-2-business.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>B2B Payments</a></li>
+                          <li class="dl-submenu-image"><img src='images/solutions/simpel/logo-simpel.png' class='dropdown-logos'/><a href="simpel.html" class='solutions-dropdown-text' style='clear:none;padding:22px 10px 24px 10px;font-size: 14px;'>Simpel</a></li>
+                          <li class="dl-submenu-image" style='border-top: 1px solid #dedede;'><a href="payment-solutions.html" class='all-payments-button' style='color:#999;font-size:13px;text-transform:uppercase;'>All payment solutions</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="benefits.html">Benefits</a><li>
+                  <li><a href="technology.html">Technology</a></li>
+                  <li >
+                      <a href="#" role="button" aria-haspopup="true" aria-expanded="false">More
+                          <i class="glyphicon glyphicon-chevron-right glyphicon-mod" ></i>
+                      </a>
+                      <ul class="dl-submenu">
+                          <li><a href="about.html">About Us</a></li>
+                          <li><a href="careers.html">Careers</a></li>
+                          <li><a href="partners.html">Partners</a></li>
+                          <li><a href="contact.html">Contact Us</a></li>
+                          <li><a href="story.html">Our Story</a></li>
+                      </ul>
+                  </li>
+                  <li><div class='gradient-separation-grey'></div></li>
+                  <li><a href="index.html" style='color:#999;font-size:13px;text-transform:uppercase;'>Sign up&nbsp;</a></li>
+              </ul>
+          </div>
+        </div><!-- /.container-fluid -->
+      </nav>
+  </header>
+
+<div class="page-body" >
+    <div id="bills-page-carousel" class="carousel slide page-carousel payment-sol-corousel" data-ride="carousel">
+        <!-- Indicators -->
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" id="bills-slide-1">
+                <div>
+                    <div class="container">
+                        <div class="row main-slide">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bills-slide-content page-slide-content">
+                                <img src="images/solutions/bills/head.png" alt=""  class="bills-img-logo payment-sol-logo img-responsive"/>
+                                <div class="slide-text payment-sol-slide-text">
+                                    <div class="">
+                                        <img src="images/solutions/bills/logo-bills.png" class='solutions-logos'>
+                                        <h1 class="solution-name">Biller Network</h1>
+                                        <!-- <h1 class="service-tagline hidden-sm hidden-xs">&nbsp;&nbsp;|&nbsp;&nbsp;</h1> -->
+                                        <br/>
+                                        <h1 class="service-tagline">All Billers. One Platform.</h1>
+                                    </div>
+                                    <p class="align-center solution-head-text">Connect to India’s largest biller aggregator for most bill payment offerings. BillDesk is the only interconnected Biller aggregation and Banks network in India. Our flagship biller aggregation platform  presentment and payment solution aggregates Billers across India and offers an ability to extract and present bills to customers, enabling them to pay utility and other bills from a single platform.</p>
+                                    <img src='images/solutions/bills/bills-header.png' class='merchant-img'/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='gradient-separation'></div>
+
+    <div class="container bills-content payments-sol-page-content page-section">
+      <!-- <h2 class="media-heading solutions-section-heading">Heading Text</h2> -->
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <h3 class="solutions-section-heading">Only Biller Platform. Extensive Network</h3>
+    			  <h4 class='solutions-section-subheading'>The most extensive Biller Platform and only player in India. BillDesk provides widest reach to Billers, Banks and other organisations offering Bill payment services.</h4>
+          </div>
+        </div>
+        <div class="row visible-xs-block">
+            <div class="col-xs-12">
+                <img class="media-object v_align" src="images/solutions/bills/billpay-on-payment-networks.png" width="100%">
+            </div>
+        </div>
+        <div class="row hidden-xs">
+            <div class="col-sm-12 col-xs-12">
+                <div class="bubble_continer">
+                    <div class="bubble-row">
+                        <div class="bubble bubble_s1" style="opacity: 1;">
+                            <img src="images/biller-logos/logo-01.png">
+                            <span>Aircel</span>
+                        </div>
+                        <div class="bubble bubble_s1" style="opacity: 1;">
+                            <img src="images/biller-logos/logo-02.png">
+                            <span>Axis bank</span>
+                        </div>
+                        <div class="bubble bubble_s1" style="opacity: 1;">
+                            <img src="images/biller-logos/logo-03.png">
+                            <span>Company 1</span>
+                        </div>
+                        <div class="bubble bubble_s1" style="opacity: 1;">
+                            <img src="images/biller-logos/logo-04.png">
+                            <span>Airtel</span>
+                        </div>
+                    </div>
+                    <div class="bubble-row">
+                        <div class="bubble bubble_s1" style="opacity: 1;">
+                            <img src="images/biller-logos/logo-05.png">
+                            <span>India Today</span>
+                        </div>
+                        <div class="bubble bubble_s1" style="opacity: 1;">
+                            <img src="images/biller-logos/logo-06.png">
+                            <span>Citi Bank</span>
+                        </div>
+                        <div class="bubble bubble_s1" style="opacity: 1;">
+                            <img src="images/biller-logos/logo-07.png">
+                            <span>Bank of India</span>
+                        </div>
+                        <div class="bubble bubble_s1" style="opacity: 1;">
+                            <img src="images/biller-logos/logo-08.png">
+                            <span>Edelweiss Tokio</span>
+                        </div>
+                    </div>
+                    <div class="bubble-row">
+                        <div class="bubble bubble_s1" style="opacity: 1;">
+                            <img src="images/biller-logos/logo-09.png">
+                            <span>Bharti Axa</span>
+                        </div>
+                        <div class="bubble bubble_s1" style="opacity: 1;">
+                            <img src="images/biller-logos/logo-10.png">
+                            <span>Reader's Digest</span>
+                        </div>
+                        <div class="bubble bubble_s1" style="opacity: 1;">
+                            <img src="images/biller-logos/logo-11.png">
+                            <span>Bajaj Finserv</span>
+                        </div>
+                        <div class="bubble bubble_s1" style="opacity: 1;">
+                            <img src="images/biller-logos/logo-12.png">
+                            <span>Bescom</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12 bills-columns">
+            <h4 class="solutions-section-title text-xs-center">Dedicated Platform with 70 + Organisations in India</h4>
+            <p class="text-xs-center">Today, 70 + organisations comprising banks, wallets, etc. offer their customers bill presentment services on their platform. These bill presentment services, powered by BillDesk Biller Network, enable payment of multiple bills from the bank’s platform. </p>
+            <br />
+        </div>
+        <div class="col-md-6 col-sm-12 bills-columns">
+            <h4 class="solutions-section-title text-xs-center">300 + Billers present Bills and get paid conveniently</h4>
+            <p class="text-xs-center">BillDesk Biller Network (BBN), trusted by 300+ billers is the largest biller network in India. BBN has strong partnerships with providers of services in the domains of utilities, telecom &amp; communication and insurance companies to name a few.</p>
+        </div>
+    </div>
+
+    <div class='page-section blockquote-section'>
+      <h3 class="blockquote container">BillDesk biller network has a comprehensive technology stack for enabling bill presentment payment: Universal Billpay, Instapay and Cross Border Billpay Platform.</h3>
+    </div>
+
+    <div class="page-section">    <!-- Universal Bill Pay -->
+        <div class="container bills-content">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 solutions-section-text">
+                  <h3 class="solutions-section-heading solution-name align-center">Universal BillPay</h3>
+                  <h4 class='solutions-section-subheading'>BillDesk UBP is a ready and integrated solution comprising technology and content of 300+ billers from BillDesk Biller Network and 20+ partners from BillDesk Recharge Network.</h4>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <img class="media-object v_align" src="images/solutions/bills/billpay-on-payment-networks.png" width="100%">
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                      <p class="text-xs-center">BillDesk enables banks to offer a bill presentment and payment service to their customers to see and pay all their bills at a single location. It’s Universal Bill Payment Platform is enabled by most banks, wallets  and leading payment networks in India.</p>
+                      <div class='ubp-key-features'>
+                        <p>Key features</p>
+                        <ul>
+                          <li>Consistent experience of access across all channels - internet, mobile, kiosks, walk-ins etc.</li>
+                          <li>Provides seamless experience to users.</li>
+                          <li>Enable registration and account management through assisted service of banks.</li>
+                          <li>Securely and seamlessly integrates with bank/wallet platforms using a single sign-in</li>
+                          <li>API-based interactions.</li>
+                          <li>Allows customers to setup recurring payment, receive alerts and setup standing instructions.</li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-section page-section-alternate">
+      <div class="container bills-content">
+      <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <h3 class="solutions-section-heading solution-name align-center">Instapay</h3>
+				<h4 class='solutions-section-subheading'>A convenient and easy to setup platform which allows customers to make utility and other bill payments instantly.</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <img src="images/solutions/bills/instant-payment-solution.png" class="img-responsive v_align" alt="">
+            </div>
+            <div class="col-sm-12 col-md-6">
+                    <p class="v_align text-xs-center">BillDesk Instapay incorporates multiple platforms - BillDesk Biller Network, Biller Recharge Network and BillDesk Payment Gateway.<br><br> Most Banks and many wallets, organisations in India have enabled BillDesk InstaPay solution to add value to their customers , increase customer engagement and build loyalty.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-section">
+      <div class="container bills-content">      <!-- Cross-border BillPay -->
+          <div class="row">
+              <div class="col-sm-12 col-md-12 col-xs-12">
+                  <h3 class="solutions-section-heading solution-name align-center">Cross-Border BillPay</h3>
+                  <h4 class='solutions-section-subheading'>For Transactions beyond borders </h4>
+              </div>
+                <div class='row'>
+                  <div class="col-md-6 col-sm-12 bills-columns">
+                    <p class="v_align text-xs-center">Our Cross Border solution eliminates business limitations caused by geographic borders. Securely collect bill payments in multiple currency from international customers.</p>
+                  </div>
+                  <div class="col-md-6 col-sm-12 bills-columns">
+                    <img class="media-object v_align" src="images/solutions/bills/cross-border-billpay.png" alt="..." width="100%">
+                  </div>
+                </div>
+
+          </div>
+      </div>
+    </div>
+
+    <div class="page-section page-section-alternate">
+      <div class="container bills-content payments-sol-page-content universal-bill page-section">    <!-- Merchant Categories -->
+        <div class='row'>
+          <div class="col-sm-12 col-md-12 col-xs-12">
+              <h3 class="solutions-section-heading solution-name align-center">Corporate Bill Payments</h3>
+              <h4 class='solutions-section-subheading'>Easy, Quick and Secure Bill payments</h4>
+          </div>
+            <div class="col-md-6 col-sm-12 bills-columns">
+              <p class="text-xs-center">Pay multiple bills including utility, telecom and others across all your business departments and subsidiaries in a single transaction with Corporate Biller Payment Platform.</p>
+              <div class='ubp-key-features'>
+                <p>Key features</p>
+                <ul>
+                  <li>Manage bill payment quickly and securely by assigning secure access rights to users.</li>
+                  <li>Track bill payments easily by grouping your users and billers by region, department etc</li>
+                  <li>Receive regular e-mail alerts</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 bills-columns">
+              <img class="media-object v_align" src="images/solutions/bills/corporate-bill-payments.png" alt="..." width="100%">
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="page-section-alternate page-section biller-facts-background">
+      <div class="container bills-content payments-sol-page-content universal-bill">      <!-- Section 6 -->
+          <div class="row">
+              <div class="col-sm-12 col-md-12 col-xs-12">
+                  <h3 class="solutions-section-heading">Enabled &amp; powered by</h3>
+              </div>
+          </div>
+
+          <div class='page-section' id='biller-facts'>
+            <div class='container'>
+              <div class='row'>
+                <div class="col-md-4 col-xs-12 col-sm-12 fact-border">
+                  <h1 class='fact-number'>45+</h1>
+                  <h4 class='fact-name'>Banks</h4>
+                </div>
+                <div class="col-md-4 col-xs-12 col-sm-12 fact-border">
+                  <h1 class='fact-number'>10+</h1>
+                  <h4 class='fact-name'>Wallets</h4>
+                </div>
+                <div class="col-md-4 col-xs-12 col-sm-12">
+                  <h1 class='fact-number'>20+</h1>
+                  <h4 class='fact-name'>Organisations</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+    <div class="container bills-content payments-sol-page-content universal-bill page-section" style="padding-bottom: 0px;">    <!-- Section 7 -->
+        <div class="row" style="margin-bottom: 0px;">
+            <div class="col-sm-12 col-md-12">
+                <h3 class="solutions-section-heading">Biller Categories</h3>
+                <h4 class='solutions-section-subheading'>Our flagship solution enables all types of billers to present bills and collect payments easily through a single location interface.<br> A glimpse into our biller categories:</h4>
+                <ul class="nav nav-tabs nav-tabs-mod hidden-xs" role="tablist" id="biller_categories_tabs">
+                    <li role="presentation" class="active"><a href="#utilities_merchants" class='partner-tab' aria-controls="messages" role="tab" >Utilities</a></li>
+                    <li role="presentation"><a href="#telecom_merchants" class='partner-tab' aria-controls="profile" role="tab" >Telecom</a></li>
+                    <li role="presentation"><a href="#insurance_merchants" class='partner-tab' aria-controls="home" role="tab" >Insurance</a></li>
+                    <li role="presentation"><a href="#other_merchants" class='partner-tab' aria-controls="home" role="tab" >Others</a></li>
+                </ul>
+                <div class="dropdown visible-xs-block merchant-dropdown" role="tablist">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="merchantDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Merchant
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="merchantDropdown">
+                    <li class="active"><a href="#utilities_merchants" role="tab">Utilities</a></li>
+                    <li><a href="#telecom_merchants" role="tab">Telecom</a></li>
+                    <li><a href="#insurance_merchants" role="tab">Insurance</a></li>
+                    <li><a href="#other_merchants" role="tab">Others</a></li>
+                  </ul>
+              </div>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="utilities_merchants">
+                      <div class="row">
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/utilities/utilities-01.png" class="merchant_logo" />
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/utilities/utilities-02.png" class="merchant_logo" />
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/utilities/utilities-03.png" class="merchant_logo" />
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/utilities/utilities-04.png" class="merchant_logo" />
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/utilities/utilities-05.png" class="merchant_logo" />
+                        </div>
+                      </div>
+                      <div class='page-section container'>
+                        <img src='images/solutions/bills/bills_utilities.png' class='merchants-bg-img'/>
+                      </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="telecom_merchants">
+                      <div class="row">
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/telecom/telecom-01.png" class="merchant_logo" />
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/telecom/telecom-02.png" class="merchant_logo" />
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/telecom/telecom-03.png" class="merchant_logo" />
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/telecom/telecom-04.png" class="merchant_logo" />
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/telecom/telecom-05.png" class="merchant_logo" />
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/telecom/telecom-06.png" class="merchant_logo" />
+                        </div>
+                      </div>
+                      <div class='page-section container'>
+                        <img src='images/solutions/bills/bills_telecom.png' class='merchants-bg-img'/>
+                      </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="insurance_merchants">
+                      <div class="row">
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/insurance/insurance-01.png" class="merchant_logo" />
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/insurance/insurance-02.png" class="merchant_logo" />
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/insurance/insurance-03.png" class="merchant_logo" />
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/insurance/insurance-04.png" class="merchant_logo" />
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/insurance/insurance-05.png" class="merchant_logo" />
+                        </div>
+                      </div>
+                      <div class='page-section container'>
+                        <img src='images/solutions/bills/bills_insurance.png' class='merchants-bg-img'/>
+                      </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="other_merchants">
+                      <div class="row">
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/others/others-01.png" class="merchant_logo" />
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/others/others-02.png" class="merchant_logo" />
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/others/others-03.png" class="merchant_logo" />
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/others/others-04.png" class="merchant_logo" />
+                        </div>
+                        <div class="col-lg-2 col-sm-6 col-xs-6">
+                            <img src="images/merchant-categories/biller-network/others/others-05.png" class="merchant_logo" />
+                        </div>
+                      </div>
+                      <div class='page-section container'>
+                        <img src='images/solutions/bills/bills_others.png' class='merchants-bg-img'/>
+                      </div>
+                    </div>
+                </div>
+                <!--div class="merchant-categories-group">
+                    <div class="col-xs-6 col-sm-6">
+                        <ul class="list-group" style="background-color:transparent;">
+                          <li><h4>Electricity</h4></li>
+                          <li><h4>Water</h4></li>
+                          <li><h4>Cable &amp; DTH</h4></li>
+                          <li><h4>Insurance</h4></li>
+                          <li><h4>Loans</h4></li>
+                          <li><h4>Credit Card Payments</h4></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6 col-sm-6">
+                        <ul class="list-group" style="background-color:transparent;">
+                          <li><h4>Gas</h4></li>
+                          <li><h4>Telecom</h4></li>
+                          <li><h4>Internet Services</h4></li>
+                          <li><h4>Mutual Funds</h4></li>
+                          <li><h4>Subscription</h4></li>
+                          <li><h4>Donations</h4></li>
+                        </ul>
+                    </div>
+                </div-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer-->
+<div class='gradient-separation'></div>
+<footer class='footer-style'>
+    <div class='page-section footer-primary container'>
+        <div class="row" style="position: relative;">
+            <object data="images/svg/bd-logo-white.svg" type="image/svg+xml" class="bd-footer-logo" >
+                <p>BillDesk_Logo</p>
+            </object>
+            <div class="col-lg-2 col-sm-3 col-md-2 col-xs-6 footer-groups footer-width-adjust-overview">
+                <h4>OVERVIEW</h4>
+                <ul class="" style="list-style:none; padding-left:0px;">
+                    <li class="footer-items"><a href="payment-solutions.html">Payment Solutions</a></li>
+                    <li class="footer-items"><a href="benefits.html">Benefits</a></li>
+                    <li class="footer-items"><a href="technology.html">Technology</a></li>
+                    <li class="footer-items"><a href="partners.html">Partners</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-sm-3 col-md-2 col-xs-6 footer-groups footer-width-adjust-range">
+              <h4>RANGE OF SOLUTIONS</h4>
+                <ul class="" style="list-style:none; padding-left:0px;">
+                  <li class="footer-items"><a href="payments.html">Payment Gateway</a></li>
+                  <li class="footer-items"><a href="bills.html">Biller Network</a></li>
+                  <li class="footer-items"><a href="recharge.html">Recharge Solution</a></li>
+                  <li class="footer-items"><a href="recurring-payments.html">Recurring Payments</a></li>
+                  <li class="footer-items"><a href="business-2-business.html">B2B Payments</a></li>
+                  <li class="footer-items"><a href="simpel.html">Simpel Payments</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 footer-groups footer-width-adjust-core" style='margin-left: 0px;'>
+                <h4>CORE</h4>
+                <ul class="" style="list-style:none; padding-left:0px;">
+                  <li class="footer-items"><a href="about.html">About Us</a></li>
+                  <li class="footer-items"><a href="story.html">Our Story</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 footer-groups footer-width-adjust-joinus" style='margin-left: 0px;'>
+              <h4>JOIN US</h4>
+              <ul style="list-style:none; padding-left:0px;">
+                <!-- <li class="footer-items"><a href="careers.html">Life@BillDesk</a></li> -->
+                <li class="footer-items"><a href="careers.html">Careers</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2 col-sm-2 col-md-2 col-xs-6 footer-groups footer-width-adjust-touch">
+                <h4>GET IN TOUCH</h4>
+                <ul style="list-style:none; padding-left:0px;">
+                    <li class="footer-items"><a href="contact.html">Contact Us</a></li>
+                    <li class="footer-items"><a href="">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-sm-2 col-md-2 col-xs-6 footer-groups">
+                <h4 class='text-align-right'>ACCOUNT</h4>
+                <ul style="list-style:none; padding-left:0px;">
+                    <li class="footer-items text-align-right"><a href="">Sign In</a></li>
+                    <li class="footer-items text-align-right"><a href="">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class='page-section container footer-secondary'>
+        <div class='footer-logos container'>
+            <img class="footer-logo" src='images/index/rupay.png'/>
+            <img class="footer-logo" src='images/index/verified.png'/>
+            <img class="footer-logo" src='images/index/securecode.png'/>
+            <img class="footer-logo" src='images/index/safekey.png'/>
+            <img class="footer-logo" src='images/index/diners.png'/>
+            <img class="footer-logo" style='' src='images/index/iso.png'/>
+            <img class="footer-logo" style='' src='images/index/pci.png'/>
+        </div>
+    </div>
+
+      <div class="page-section container footer-tertiary">
+        <div class='footer-bottommost container'>
+          <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4">
+              <ul class="footer-bottommost-links">
+                  <li class="footer-bottommost-items"><a href="">Terms &amp; Conditions</a></li>
+                  <li class="footer-bottommost-items"><a href="">Privacy Policy</a></li>
+                  <li class="footer-bottommost-items"><a href="">Legal</a></li>
+              </ul>
+          </div>
+          <div class='col-sm-12 col-xs-12 col-md-4 col-lg-4'>
+            <div class='copyright'>IndiaIdeas Pvt. Ltd. 2016&nbsp;&bull;&nbsp;All Rights Reserved</div>
+          </div>
+          <div class='col-sm-12 col-xs-12 col-md-4 col-lg-4'>
+              <div class="social-icon-container">
+                  <div><img src='images/social/linkedin.svg' class='social-icon'/></div>
+                  <div class=''><img src='images/social/facebook.svg' class='social-icon'/></div>
+                  <div class=''><img src='images/social/twitter.svg' class='social-icon'/></div>
+              </div>
+          </div>
+      </div>
+
+</footer>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bubble-slide/bubble-slide.js"></script>
+<script src="js/common.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.dlmenu.js"></script>
+<script type="text/javascript">
+</script>
+</script>
+</body>
+</html>

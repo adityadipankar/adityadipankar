@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,yBAA0B;EAGd,2CAAI;IACA,MAAM,EAAE,IAAI;IACZ,KAAK,EAAE,IAAI",
+"sources": ["../scss/styles_479_below.scss"],
+"names": [],
+"file": "styles_479_below.css"
+}
