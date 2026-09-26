@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reverence Chair — Aditya Dipankar</title>
+  <link rel="shortcut icon" type="image/png" href="../ad-logo.ico"/>
+  <style>
+    html, body { margin: 0; height: 100%; }
+    body {
+      background: #f2efe9;
+      font-family: helvetica, arial, sans-serif;
+      color: #00020a;
+      overflow: hidden;
+    }
+    #viewer { position: fixed; inset: 0; }
+    header { position: fixed; top: 0; left: 0; padding: 32px 40px; pointer-events: none; }
+    header img { height: 44px; pointer-events: auto; }
+    h1 { font-size: 40px; letter-spacing: -1.5px; line-height: 44px; margin: 18px 0 4px; }
+    p { margin: 0; font-size: 15px; color: #777; }
+    #hint { position: fixed; bottom: 24px; left: 0; right: 0; text-align: center; font-size: 13px; color: #999; }
+    #loading { position: fixed; inset: 0; display: grid; place-items: center; font-size: 15px; color: #999; }
+    @media (max-width: 479px) {
+      header { padding: 20px 16px; }
+      h1 { font-size: 30px; line-height: 34px; }
+    }
+  </style>
+  <script type="importmap">
+    { "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+    } }
+  </script>
+</head>
+<body>
+  <div id="viewer"></div>
+  <div id="loading">Loading chair…</div>
+  <header>
+    <a href="../"><img src="../ad-logo.svg" alt="Aditya Dipankar"></a>
+    <h1>Reverence Chair</h1>
+    <p>Drag to rotate · scroll or pinch to zoom</p>
+  </header>
+  <div id="hint">Double-click to reset the view</div>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+    import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+    const container = document.getElementById('viewer');
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 0.9;
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    container.appendChild(renderer.domElement);
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0xf2efe9);
+    const pmrem = new THREE.PMREMGenerator(renderer);
+    scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+
+    const camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.01, 100);
+
+    // Key light for the ground shadow
+    const sun = new THREE.DirectionalLight(0xffffff, 1.6);
+    sun.position.set(1.5, 3, 2);
+    sun.castShadow = true;
+    sun.shadow.mapSize.set(2048, 2048);
+    sun.shadow.camera.left = sun.shadow.camera.bottom = -1.5;
+    sun.shadow.camera.right = sun.shadow.camera.top = 1.5;
+    sun.shadow.radius = 6;
+    sun.shadow.bias = -0.0005;
+    scene.add(sun);
+
+    const ground = new THREE.Mesh(
+      new THREE.PlaneGeometry(20, 20),
+      new THREE.ShadowMaterial({ opacity: 0.18 })
+    );
+    ground.rotation.x = -Math.PI / 2;
+    ground.receiveShadow = true;
+    scene.add(ground);
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = 1.2;
+    controls.maxPolarAngle = Math.PI / 2 - 0.02; // don't go below the floor
+    controls.addEventListener('start', () => { controls.autoRotate = false; });
+
+    let home = null;
+    function resetView() {
+      if (!home) return;
+      camera.position.copy(home.position);
+      controls.target.copy(home.target);
+      controls.update();
+    }
+    renderer.domElement.addEventListener('dblclick', resetView);
+    if (matchMedia('(pointer: coarse)').matches) {
+      document.getElementById('hint').textContent = 'Double-tap to reset the view';
+    }
+
+    new GLTFLoader().load('reverence-chair.glb', (gltf) => {
+      const chair = gltf.scene;
+      chair.traverse((o) => {
+        if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; }
+      });
+      scene.add(chair);
+
+      const box = new THREE.Box3().setFromObject(chair);
+      const size = box.getSize(new THREE.Vector3());
+      const center = box.getCenter(new THREE.Vector3());
+      // Pull back further on narrow (portrait) screens so the whole chair fits
+      const fit = Math.max(1, 1.1 / camera.aspect);
+      const dist = Math.max(size.x, size.y, size.z) * 2.6 * fit;
+      home = {
+        target: center.clone(),
+        position: center.clone().add(new THREE.Vector3(0.75, 0.45, 1).normalize().multiplyScalar(dist)),
+      };
+      controls.minDistance = dist * 0.3;
+      controls.maxDistance = dist * 3;
+      resetView();
+      document.getElementById('loading').remove();
+    }, undefined, (err) => {
+      document.getElementById('loading').textContent = 'Could not load the model.';
+      console.error(err);
+    });
+
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    renderer.setAnimationLoop(() => {
+      controls.update();
+      renderer.render(scene, camera);
+    });
+  </script>
+</body>
+</html>
